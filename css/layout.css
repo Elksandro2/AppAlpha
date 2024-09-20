@@ -1,0 +1,17 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+}
+
+body{
+    background-image: linear-gradient(rgb(33, 173, 224), rgb(245, 154, 49));
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding-top: 40px;
+}

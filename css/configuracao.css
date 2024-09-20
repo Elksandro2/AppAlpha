@@ -1,0 +1,102 @@
+.escolha-tema {
+    font-size: 25px;
+    margin: 30px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+header p {
+    font-size: 30px;
+}
+
+.visualizacao {
+    font-size: 30px;
+    display: block;
+    margin: auto;
+    background-color: rgba(245, 154, 49, 0.6);
+    border-radius: 20px;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.tamanho-letra, .tipo-letra {
+    background-color: rgba(245, 154, 49, 0.6);
+    border-radius: 20px;
+    max-width: 500px;
+    padding: 10px;
+}
+
+p {
+    text-align: center;
+}
+
+.salvar {
+    display: grid;
+    justify-content: center;
+}
+
+.salvar button {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgb(245, 154, 49);
+    padding: 5px;
+    border-radius: 40px;
+    margin-top: 40px;
+    border: none;
+}
+
+.salvar button:active {
+    box-shadow: 0 5px rgb(95, 95, 94);
+    transform: translateY(4px);
+}
+
+.salvar i {
+    font-size:40px;
+}
+
+@media (max-width: 768px) {
+    .escolha-tema {
+        font-size: 25px;
+        gap: 30px;    
+    }
+
+    .tamanho-letra, .tipo-letra {
+        max-width: 430px;
+    }
+
+    .visualizacao {
+        font-size: 25px;
+        max-width: 250px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+    
+    header p {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .escolha-tema {
+        font-size: 22px;
+        gap: 20px;   
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .visualizacao {
+        font-size: 22px;
+        width: 80%;
+    }
+}

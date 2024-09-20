@@ -1,0 +1,48 @@
+.tabela {
+    margin-top: 40px;
+    width: 100%;
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+body {
+    text-align: center;
+}
+
+th {
+    background-color: rgb(33, 173, 224);
+}
+
+td {
+    padding: 30px;
+}
+
+@media (max-width: 770px) {
+    h2 {
+        font-size: 45px;
+    }
+    .tabela {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    h2 {
+        font-size: 40px;
+    }
+    .tabela {
+        font-size: 22px;
+    }    
+}
+
+@media (max-width: 460px) {
+    h2 {
+        font-size: 35px;
+    }
+    .tabela {
+        font-size: 18px;
+    }    
+}

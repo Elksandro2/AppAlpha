@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contextos</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/contextos.css">
+</head>
+<body>
+    
+    <header>
+        <h2>TEMAS</h2>
+    </header>
+
+    <main>
+        <div class="flex-container">
+            <a href="jogo.html" class="box" onclick="escolherContexto('comida')">
+                <img src="../img/temas/comida.jpg" alt="Comida">
+                <h3 class="tamanhoVariavel">comida</h3>
+            </a>
+            <a href="jogo.html" class="box" onclick="escolherContexto('cidade')">
+                <img src="../img/temas/cidade.jpg" alt="Cidade">
+                <h3 class="tamanhoVariavel">cidade</h3>
+            </a>
+            <a href="jogo.html" class="box" onclick="escolherContexto('cores')">
+                <img src="../img/temas/cores.jpg" alt="Cores">
+                <h3 class="tamanhoVariavel">cores</h3>
+            </a>
+            <a href="jogo.html" class="box" onclick="escolherContexto('cozinha')">
+                <img src="../img/temas/cozinha.jpg" alt="Cozinha">
+                <h3 class="tamanhoVariavel">cozinha</h3>
+            </a>
+            <a href="jogo.html" class="box" onclick="escolherContexto('natureza')">
+                <img src="../img/temas/natureza.jpg" alt="Natureza">
+                <h3 class="tamanhoVariavel">natureza</h3>
+            </a>
+            <a href="jogo.html" class="box" onclick="escolherContexto('frutas')">
+                <img src="../img/temas/frutas.jpg" alt="Frutas">
+                <h3 class="tamanhoVariavel">frutas</h3>
+            </a>
+    </main>
+
+    <script src="../js/jogo.js">
+        function escolherContexto(contexto) {
+            localStorage.setItem('contextoSelecionado', contexto);
+        }
+    </script>
+</body>
+</html>

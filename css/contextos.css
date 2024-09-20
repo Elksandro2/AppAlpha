@@ -1,0 +1,65 @@
+.flex-container {
+    margin: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os cards na linha */
+    gap: 20px; /* Espaçamento fixo entre os cards */
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.box {
+    flex: 1 1 calc(30% - 20px); /* Cada card ocupa 25% da largura disponível, subtraindo o espaço para o gap */
+    max-width: calc(30% - 20px); /* Limita a largura máxima dos cards */
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid rgb(179, 176, 176);
+    border-radius: 8px;
+    background-color: rgba(179, 176, 176, 0.5);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s;
+}
+
+.box:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse sobre o card */
+    background-color: rgb(245, 154, 49);
+}
+
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.box h3 {
+    padding: 5px;
+    font-size: 40px;
+}
+
+@media (max-width: 1024px) {
+    .box {
+        flex: 1 1 calc(33.333% - 20px); /* Três cards por linha */
+        max-width: calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        flex: 1 1 calc(50% - 20px); /* Dois cards por linha */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        flex: 1 1 calc(80% - 20px); /* Um card por linha */
+        max-width: calc(80% - 20px);
+    }
+
+    .box h3 {
+        font-size: 30px;
+    }
+}

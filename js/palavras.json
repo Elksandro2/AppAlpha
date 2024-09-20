@@ -1,0 +1,8 @@
+{
+    "comida": ["pizza", "hamburguer", "sorvete", "salada", "bolo"],
+    "cidade": ["paris", "londres", "tokyo", "berlim", "moscou"],
+    "cores": ["vermelho", "azul", "verde", "amarelo", "preto"],
+    "cozinha": ["garfo", "faca", "colher", "panela", "fogão"],
+    "natureza": ["árvore", "floresta", "rio", "montanha", "deserto"],
+    "frutas": ["maçã", "banana", "uva", "laranja", "morango"]
+}

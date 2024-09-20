@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/configuracao.css">
+    <script src="https://kit.fontawesome.com/c141c3c5e6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <header>
+        <div>
+            <h2>CONFIGURAÇÕES</h2>
+            <p>TIPO DE LETRA</p>
+        </div>
+    </header>
+    <main>
+        <div class="escolha-tema">
+            <div class="tipo-letra">
+                <input type="radio" name="tipoLetra" value="cursiva">
+                <label for="cursiva">CURSIVA</label><br>
+                <input type="radio" name="tipoLetra" value="bastao">
+                <label for="bastao">BASTÃO</label>
+            </div>
+            <div class="tamanho-letra">
+                <input type="radio" name="tamanhoLetra" value="maiuscula">
+                <label for="maiuscula">MAIÚSCULAS</label><br>
+                <input type="radio" name="tamanhoLetra" value="minuscula">
+                <label for="minuscula">minúsculas</label>
+            </div>
+        </div>
+    
+        <div class="visualizacao">
+            <p style="text-align: center;">VISUALIZAÇÃO</p>
+            <p class="tamanhoVariavel">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+        </div>
+
+        <div class="salvar">
+            <button onclick="mudarLetra()"><i class="fa-solid fa-floppy-disk"></i></button>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

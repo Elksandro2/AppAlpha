@@ -1,0 +1,144 @@
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.forca {
+    text-align: center;
+}
+
+.imagem-erro {
+    max-width: 80%;
+    height: auto;
+    max-height: 800px;
+}
+
+.palavra-e-teclado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 50px;
+}
+
+.palavra-e-teclado .imagem-elemento {
+    width: 80%;
+    max-width: 350px;
+    border: 2px solid white;
+    border-radius: 20px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.palavra-e-teclado p {
+    border: 2px solid white;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.teclado button {
+    width: 52px;
+    height: 52px;
+    margin: 2px;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: rgb(15, 127, 168);
+    border: none;
+    border-radius: 8px;
+}
+
+.teclado button:hover {
+    background-color: rgb(33, 173, 224);
+    color: white;
+}
+
+tr {
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+}
+
+@media (max-width: 1180px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .forca {
+        margin-bottom: 25px;
+    }
+
+    .imagem-erro {
+        max-width: 80%;
+        max-height: 600px;
+    }
+
+    .palavra-e-teclado .imagem-elemento {
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .teclado button {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+    }
+}
+@media (max-width: 770px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .forca {
+        margin-bottom: 60px;
+    }
+
+    .imagem-erro {
+        max-width: 80%;
+        max-height: 500px;
+    }
+
+    .palavra-e-teclado .imagem-elemento {
+        width: 80%;
+        max-width: 320px;
+    }
+
+    .teclado button {
+        width: 55px;
+        height: 55px;
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 630px) {
+    .palavra-e-teclado .imagem-elemento {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .forca {
+        margin-bottom: 5px;
+    }
+
+    .imagem-erro {
+        max-width: 80%;
+        max-height: 300px;
+    }
+
+    .palavra-e-teclado p {
+        font-size: 25px;
+        padding: 5px;
+    }
+
+    .teclado button {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+}
