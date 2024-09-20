@@ -1,5 +1,5 @@
 const palavrasPorContexto = {
-    comida: ["PIZZA", "HAMBURGER", "ARROZ", "FEIJOADA"],
+    comida: ["PIZZA", "HAMBURGUER", "ARROZ", "FEIJOADA"],
     cidade: ["AEROPORTO", "PARQUE", "SHOPPING", "RUA"],
     cores: ["VERMELHO", "AZUL", "VERDE", "AMARELO"],
     cozinha: ["TALHER", "PRATO", "GARFO", "FACA"],
@@ -18,6 +18,7 @@ let quantidadeErrosAtual = 0;
 function exibirPalavra() {
     const palavraContainer = document.getElementById('palavra');
     palavraContainer.textContent = palavraAtual.join(" ");
+    aplicarConfiguracoes(); // Aplica as configurações de estilo
 }
 
 function letraClicada(letra) {

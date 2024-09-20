@@ -15,3 +15,7 @@ body{
     color: white;
     padding-top: 40px;
 }
+
+.fonte-cursiva {
+    font-family: 'Dancing Script', cursive;
+}
