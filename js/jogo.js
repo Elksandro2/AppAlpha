@@ -1,15 +1,4 @@
-const palavrasPorContexto = {
-    comida: ["PIZZA", "HAMBURGUER", "ARROZ", "FEIJOADA"],
-    cidade: ["AEROPORTO", "PARQUE", "SHOPPING", "RUA"],
-    cores: ["VERMELHO", "AZUL", "VERDE", "AMARELO"],
-    cozinha: ["TALHER", "PRATO", "GARFO", "FACA"],
-    natureza: ["ARVORE", "FLOR", "RIO", "MONTANHA"],
-    frutas: ["MARACUJA", "BANANA", "LIMAO", "MORANGO"]
-};
-
-const contextoEscolhido = 'cores';
-const palavras = palavrasPorContexto[contextoEscolhido];
-const palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)].toUpperCase();
+const palavraSecreta = "azul";
 let palavraAtual = Array(palavraSecreta.length).fill("_");
 
 const quantidadeErrosMaximos = 6;
@@ -25,7 +14,7 @@ function letraClicada(letra) {
     let acertou = false;
     
     for (let i = 0; i < palavraSecreta.length; i++) {
-        if (palavraSecreta[i] === letra) {
+        if (palavraSecreta[i].toLowerCase() === letra.toLowerCase()) {
             palavraAtual[i] = letra;
             acertou = true;
         }
@@ -53,7 +42,7 @@ function letraClicada(letra) {
 }
 
 function atualizarImagemErro(quantidadeErro) {
-    document.getElementById('erro').src = `../img/erros/${quantidadeErro}.png`;
+    document.getElementById('erro').src = `../img/erros/erro${quantidadeErro}.png`;
 }
 
 // Inicializa o jogo ao carregar a página

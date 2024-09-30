@@ -1,0 +1,29 @@
+{
+    "contextos":[
+        {
+            "nome": "cores",
+            "desafios": [
+                "azul",
+                "vermelho",
+                "verde",
+                "amarelo",
+                "cinza",
+                "preto",
+                "branco",
+                "roxo",
+                "rosa"
+            ]
+        },
+        {
+            "nome": "frutas",
+            "desafios": [
+                "banana",
+                "laranja",
+                "abacate",
+                "morango",
+                "uva",
+                "melão"
+            ]
+        }
+    ]
+}
