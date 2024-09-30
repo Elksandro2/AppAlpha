@@ -46,6 +46,7 @@
     font-size: 22px;
     cursor: pointer;
     background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
     color: rgb(15, 127, 168);
     border: none;
     border-radius: 8px;

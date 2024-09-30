@@ -7,7 +7,7 @@ const palavrasPorContexto = {
     frutas: ["MARACUJA", "BANANA", "LIMAO", "MORANGO"]
 };
 
-const contextoEscolhido = 'comida';
+const contextoEscolhido = 'cores';
 const palavras = palavrasPorContexto[contextoEscolhido];
 const palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)].toUpperCase();
 let palavraAtual = Array(palavraSecreta.length).fill("_");
