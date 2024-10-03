@@ -26,18 +26,20 @@ function iniciarDesafio(){
     .then(data => {
         const contextos = data.contextos;
 
-        // Supondo que você queira sortear uma palavra do contexto "cores" ou "frutas"
         const desafios = contextos.find(contexto => contexto.nome.toLowerCase() === contextoSelecionado.toLowerCase()).desafios;
 
-        // Sortear uma palavra aleatória
         palavraSecreta = desafios[Math.floor(Math.random() * desafios.length)];
         palavraAtual = Array(palavraSecreta.length).fill("_"); // Inicializa a palavra atual
 
         console.log("Palavra secreta sorteada:", palavraSecreta); // Para verificar
-        exibirPalavra(); // Exibe a palavra atualizada
+        document.getElementById('imagem-desafio').src = "../img/temas/" + contextoSelecionado + "/" + palavraSecreta + ".jpg";
+        document.getElementById('imagem-desafio').onerror = function() {
+            this.src = "../img/erros/imagemIndisponivel.jpg";
+        };
+        exibirPalavra();
 
-        quantidadeErrosAtual = 0; // Reinicializa os erros para o próximo desafio
-        atualizarImagemErro(0); // Zera a imagem de erros
+        quantidadeErrosAtual = 0;
+        atualizarImagemErro(0);
     })
     .catch(error => console.error('Erro ao carregar o JSON:', error));
 }
@@ -53,8 +55,11 @@ function letraClicada(letra) {
     let acertou = false;
     
     for (let i = 0; i < palavraSecreta.length; i++) {
-        if (palavraSecreta[i].toLowerCase() === letra.toLowerCase()) {
-            palavraAtual[i] = letra;
+        const letraNormalizadaPalavra = palavraSecreta[i].normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        const letraNormalizadaClicada = letra.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+        if (letraNormalizadaPalavra === letraNormalizadaClicada) {
+            palavraAtual[i] = palavraSecreta[i];
             acertou = true;
         }
     }
@@ -99,10 +104,10 @@ function proximaRodada() {
 }
 
 function resetarBotoesLetras() {
-    const botoes = document.querySelectorAll('button[onclick^="letraClicada"]'); // Seleciona todos os botões que chamam 'letraClicada'
+    const botoes = document.querySelectorAll('button[onclick^="letraClicada"]');
     
     botoes.forEach(botao => {
-        botao.disabled = false; // Reativa o botão
+        botao.disabled = false;
         botao.style.color = ''; // Reseta a cor para o valor padrão (geralmente herdado ou definido por CSS)
         botao.style.backgroundColor = ''; // Reseta o fundo para o valor padrão
     });

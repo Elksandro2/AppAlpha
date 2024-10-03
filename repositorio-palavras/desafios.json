@@ -3,26 +3,91 @@
         {
             "nome": "cores",
             "desafios": [
-                "azul",
-                "vermelho",
-                "verde",
                 "amarelo",
-                "cinza",
-                "preto",
+                "azul",
                 "branco",
+                "laranja",
+                "marrom",
+                "preto",
+                "rosa",
                 "roxo",
-                "rosa"
+                "verde",
+                "vermelho"
             ]
         },
         {
             "nome": "frutas",
             "desafios": [
-                "banana",
-                "laranja",
                 "abacate",
+                "abacaxi",
+                "banana",
+                "goiaba",
+                "manga",
+                "melancia",
                 "morango",
-                "uva",
-                "melão"
+                "pera",
+                "tomate",
+                "uva"
+            ]
+        },
+        {
+            "nome": "cidade",
+            "desafios": [
+                "aeroporto",
+                "hospital",
+                "igreja",
+                "museu",
+                "praia",
+                "restaurante",
+                "shopping",
+                "zoológico"
+            ]
+        },
+        {
+            "nome": "comida",
+            "desafios": [
+                "arroz",
+                "batata",
+                "bolo",
+                "carne",
+                "comida",
+                "feijão",
+                "macarrão",
+                "ovo",
+                "peixe",
+                "sorvete",
+                "tomate"
+            ]
+        },
+        {
+            "nome": "cozinha",
+            "desafios": [
+                "colher",
+                "cozinha",
+                "faca",
+                "fogão",
+                "garfo",
+                "geladeira",
+                "mesa",
+                "pia",
+                "prato",
+                "ralo",
+                "torneira"
+            ]
+        },
+        {
+            "nome": "natureza",
+            "desafios": [
+                "abelha",
+                "árvore",
+                "bode",
+                "flor",
+                "galo",
+                "gato",
+                "nuvem",
+                "rio",
+                "sol",
+                "vaca"
             ]
         }
     ]
