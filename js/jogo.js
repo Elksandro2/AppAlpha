@@ -15,7 +15,7 @@ if (!contextoSelecionado) {
     iniciarDesafio();
 }
 
-function iniciarDesafio(){
+function iniciarDesafio() {
     fetch('../repositorio-palavras/desafios.json')
     .then(response => {
         if (!response.ok) {
@@ -25,17 +25,25 @@ function iniciarDesafio(){
     })
     .then(data => {
         const contextos = data.contextos;
+        const contextoAtual = contextos.find(contexto => contexto.nome.toLowerCase() === contextoSelecionado.toLowerCase());
+        
+        if (!contextoAtual) {
+            alert("Contexto não encontrado.");
+            window.location.href = 'contextos.html';
+            return;
+        }
+        
+        const desafioSelecionado = contextoAtual.desafios[Math.floor(Math.random() * contextoAtual.desafios.length)];
+        
+        palavraSecreta = desafioSelecionado.nome;
+        palavraAtual = Array(palavraSecreta.length).fill("_");
 
-        const desafios = contextos.find(contexto => contexto.nome.toLowerCase() === contextoSelecionado.toLowerCase()).desafios;
-
-        palavraSecreta = desafios[Math.floor(Math.random() * desafios.length)];
-        palavraAtual = Array(palavraSecreta.length).fill("_"); // Inicializa a palavra atual
-
-        console.log("Palavra secreta sorteada:", palavraSecreta); // Para verificar
-        document.getElementById('imagem-desafio').src = "../img/temas/" + contextoSelecionado + "/" + palavraSecreta + ".jpg";
+        document.getElementById('imagem-desafio').src = `../img/temas/${contextoAtual.nome}/${desafioSelecionado.imagem}`;
         document.getElementById('imagem-desafio').onerror = function() {
             this.src = "../img/erros/imagemIndisponivel.jpg";
         };
+
+        console.log("Palavra secreta sorteada:", palavraSecreta);
         exibirPalavra();
 
         quantidadeErrosAtual = 0;
@@ -48,7 +56,7 @@ function iniciarDesafio(){
 function exibirPalavra() {
     const palavraContainer = document.getElementById('palavra');
     palavraContainer.textContent = palavraAtual.join(" ");
-    aplicarConfiguracoes(); // Aplica as configurações de estilo
+    aplicarConfiguracoes();
 }
 
 function letraClicada(letra) {
@@ -82,7 +90,6 @@ function letraClicada(letra) {
     }
 
     if (!palavraAtual.includes("_")) {
-        alert("Você venceu!");
         proximaRodada();
     }
 }
@@ -108,7 +115,7 @@ function resetarBotoesLetras() {
     
     botoes.forEach(botao => {
         botao.disabled = false;
-        botao.style.color = ''; // Reseta a cor para o valor padrão (geralmente herdado ou definido por CSS)
-        botao.style.backgroundColor = ''; // Reseta o fundo para o valor padrão
+        botao.style.color = '';
+        botao.style.backgroundColor = ''; 
     });
 }

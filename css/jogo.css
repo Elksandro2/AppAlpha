@@ -8,6 +8,10 @@
     text-align: center;
 }
 
+#palavra{
+    font-size: 50px;
+}
+
 .imagem-erro {
     max-width: 80%;
     height: auto;
@@ -88,6 +92,7 @@ tr {
         height: 60px;
         font-size: 30px;
     }
+
 }
 @media (max-width: 770px) {
     .flex-container {
@@ -114,6 +119,10 @@ tr {
         width: 55px;
         height: 55px;
         font-size: 30px;
+    }
+
+    .letraVariavel{
+        font-size: 70px;
     }
 
 }
