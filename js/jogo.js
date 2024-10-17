@@ -16,7 +16,7 @@ if (!contextoSelecionado) {
 }
 
 function iniciarDesafio() {
-    fetch('../repositorio-palavras/desafios.json')
+    fetch('repositorio-palavras/desafios.json')
     .then(response => {
         if (!response.ok) {
             throw new Error(`Erro HTTP: ${response.status}`);
