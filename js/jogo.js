@@ -38,7 +38,7 @@ function iniciarDesafio() {
         palavraSecreta = desafioSelecionado.nome;
         palavraAtual = Array(palavraSecreta.length).fill("_");
 
-        document.getElementById('imagem-desafio').src = `../img/temas/${contextoAtual.nome}/${desafioSelecionado.imagem}`;
+        document.getElementById('imagem-desafio').src = desafioSelecionado.imagem;
         document.getElementById('imagem-desafio').onerror = function() {
             this.src = "../img/erros/imagemIndisponivel.jpg";
         };

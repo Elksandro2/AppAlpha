@@ -5,43 +5,43 @@
             "desafios": [
                 {
                     "nome": "amarelo",
-                    "imagem": "amarelo.jpg"
+                    "imagem": "../img/temas/cores/amarelo.jpg"
                 },
                 {
                     "nome": "azul",
-                    "imagem": "azul.jpg"
+                    "imagem": "../img/temas/cores/azul.jpg"
                 },
                 {
                     "nome": "branco",
-                    "imagem": "branco.jpg"
+                    "imagem": "../img/temas/cores/branco.jpg"
                 },
                 {
                     "nome": "laranja",
-                    "imagem": "laranja.jpg"
+                    "imagem": "../img/temas/cores/laranja.jpg"
                 },
                 {
                     "nome": "marrom",
-                    "imagem": "marrom.jpg"
+                    "imagem": "../img/temas/cores/marrom.jpg"
                 },
                 {
                     "nome": "preto",
-                    "imagem": "preto.jpg"
+                    "imagem": "../img/temas/cores/preto.jpg"
                 },
                 {
                     "nome": "rosa",
-                    "imagem": "rosa.jpg"
+                    "imagem": "../img/temas/cores/rosa.jpg"
                 },
                 {
                     "nome": "roxo",
-                    "imagem": "roxo.jpg"
+                    "imagem": "../img/temas/cores/roxo.jpg"
                 },
                 {
                     "nome": "verde",
-                    "imagem": "verde.jpg"
+                    "imagem": "../img/temas/cores/verde.jpg"
                 },
                 {
                     "nome": "vermelho",
-                    "imagem": "vermelho.jpg"
+                    "imagem": "../img/temas/cores/vermelho.jpg"
                 }
             ]
         },
@@ -50,43 +50,43 @@
             "desafios": [
                 {
                     "nome": "abacate",
-                    "imagem": "abacate.jpg"
+                    "imagem": "../img/temas/frutas/abacate.jpg"
                 },
                 {
                     "nome": "abacaxi",
-                    "imagem": "abacaxi.jpg"
+                    "imagem": "../img/temas/frutas/abacaxi.jpg"
                 },
                 {
                     "nome": "banana",
-                    "imagem": "banana.jpg"
+                    "imagem": "../img/temas/frutas/banana.jpg"
                 },
                 {
                     "nome": "goiaba",
-                    "imagem": "goiaba.jpg"
+                    "imagem": "../img/temas/frutas/goiaba.jpg"
                 },
                 {
                     "nome": "manga",
-                    "imagem": "manga.jpg"
+                    "imagem": "../img/temas/frutas/manga.jpg"
                 },
                 {
                     "nome": "melancia",
-                    "imagem": "melancia.jpg"
+                    "imagem": "../img/temas/frutas/melancia.jpg"
                 },
                 {
                     "nome": "morango",
-                    "imagem": "morango.jpg"
+                    "imagem": "../img/temas/frutas/morango.jpg"
                 },
                 {
                     "nome": "pera",
-                    "imagem": "pera.jpg"
+                    "imagem": "../img/temas/frutas/pera.jpg"
                 },
                 {
                     "nome": "tomate",
-                    "imagem": "tomate.jpg"
+                    "imagem": "../img/temas/frutas/tomate.jpg"
                 },
                 {
                     "nome": "uva",
-                    "imagem": "uva.jpg"
+                    "imagem": "../img/temas/frutas/uva.jpg"
                 }
             ]
         },
@@ -95,35 +95,35 @@
             "desafios": [
                 {
                     "nome": "aeroporto",
-                    "imagem": "aeroporto.jpg"
+                    "imagem": "../img/temas/cidade/aeroporto.jpg"
                 },
                 {
                     "nome": "hospital",
-                    "imagem": "hospital.jpg"
+                    "imagem": "../img/temas/cidade/hospital.jpg"
                 },
                 {
                     "nome": "igreja",
-                    "imagem": "igreja.jpg"
+                    "imagem": "../img/temas/cidade/igreja.jpg"
                 },
                 {
                     "nome": "museu",
-                    "imagem": "museu.jpg"
+                    "imagem": "../img/temas/cidade/museu.jpg"
                 },
                 {
                     "nome": "praia",
-                    "imagem": "praia.jpg"
+                    "imagem": "../img/temas/cidade/praia.jpg"
                 },
                 {
                     "nome": "restaurante",
-                    "imagem": "restaurante.jpg"
+                    "imagem": "../img/temas/cidade/restaurante.jpg"
                 },
                 {
                     "nome": "shopping",
-                    "imagem": "shopping.jpg"
+                    "imagem": "../img/temas/cidade/shopping.jpg"
                 },
                 {
                     "nome": "zoológico",
-                    "imagem": "zoologico.jpg"
+                    "imagem": "../img/temas/cidade/zoologico.jpg"
                 }
             ]
         },
@@ -132,47 +132,47 @@
             "desafios": [
                 {
                     "nome": "arroz",
-                    "imagem": "arroz.jpg"
+                    "imagem": "../img/temas/comida/arroz.jpg"
                 },
                 {
                     "nome": "batata",
-                    "imagem": "batata.jpg"
+                    "imagem": "../img/temas/comida/batata.jpg"
                 },
                 {
                     "nome": "bolo",
-                    "imagem": "bolo.jpg"
+                    "imagem": "../img/temas/comida/bolo.jpg"
                 },
                 {
                     "nome": "carne",
-                    "imagem": "carne.jpg"
+                    "imagem": "../img/temas/comida/carne.jpg"
                 },
                 {
                     "nome": "comida",
-                    "imagem": "comida.jpg"
+                    "imagem": "../img/temas/comida/comida.jpg"
                 },
                 {
                     "nome": "feijão",
-                    "imagem": "feijao.jpg"
+                    "imagem": "../img/temas/comida/feijao.jpg"
                 },
                 {
                     "nome": "macarrão",
-                    "imagem": "macarrao.jpg"
+                    "imagem": "../img/temas/comida/macarrao.jpg"
                 },
                 {
                     "nome": "ovo",
-                    "imagem": "ovo.jpg"
+                    "imagem": "../img/temas/comida/ovo.jpg"
                 },
                 {
                     "nome": "peixe",
-                    "imagem": "peixe.jpg"
+                    "imagem": "../img/temas/comida/peixe.jpg"
                 },
                 {
                     "nome": "sorvete",
-                    "imagem": "sorvete.jpg"
+                    "imagem": "../img/temas/comida/sorvete.jpg"
                 },
                 {
                     "nome": "tomate",
-                    "imagem": "tomate.jpg"
+                    "imagem": "../img/temas/comida/tomate.jpg"
                 }
             ]
         },
@@ -181,47 +181,47 @@
             "desafios": [
                 {
                     "nome": "colher",
-                    "imagem": "colher.jpg"
+                    "imagem": "../img/temas/cozinha/colher.jpg"
                 },
                 {
                     "nome": "cozinha",
-                    "imagem": "cozinha.jpg"
+                    "imagem": "../img/temas/cozinha/cozinha.jpg"
                 },
                 {
                     "nome": "faca",
-                    "imagem": "faca.jpg"
+                    "imagem": "../img/temas/cozinha/faca.jpg"
                 },
                 {
                     "nome": "fogão",
-                    "imagem": "fogao.jpg"
+                    "imagem": "../img/temas/cozinha/fogao.jpg"
                 },
                 {
                     "nome": "garfo",
-                    "imagem": "garfo.jpg"
+                    "imagem": "../img/temas/cozinha/garfo.jpg"
                 },
                 {
                     "nome": "geladeira",
-                    "imagem": "geladeira.jpg"
+                    "imagem": "../img/temas/cozinha/geladeira.jpg"
                 },
                 {
                     "nome": "mesa",
-                    "imagem": "mesa.jpg"
+                    "imagem": "../img/temas/cozinha/mesa.jpg"
                 },
                 {
                     "nome": "pia",
-                    "imagem": "pia.jpg"
+                    "imagem": "../img/temas/cozinha/pia.jpg"
                 },
                 {
                     "nome": "prato",
-                    "imagem": "prato.jpg"
+                    "imagem": "../img/temas/cozinha/prato.jpg"
                 },
                 {
                     "nome": "ralo",
-                    "imagem": "ralo.jpg"
+                    "imagem": "../img/temas/cozinha/ralo.jpg"
                 },
                 {
                     "nome": "torneira",
-                    "imagem": "torneira.jpg"
+                    "imagem": "../img/temas/cozinha/torneira.jpg"
                 }
             ]
         },
@@ -230,43 +230,43 @@
             "desafios": [
                 {
                     "nome": "abelha",
-                    "imagem": "abelha.jpg"
+                    "imagem": "../img/temas/natureza/abelha.jpg"
                 },
                 {
                     "nome": "árvore",
-                    "imagem": "arvore.jpg"
+                    "imagem": "../img/temas/natureza/arvore.jpg"
                 },
                 {
                     "nome": "bode",
-                    "imagem": "bode.jpg"
+                    "imagem": "../img/temas/natureza/bode.jpg"
                 },
                 {
                     "nome": "flor",
-                    "imagem": "flor.jpg"
+                    "imagem": "../img/temas/natureza/flor.jpg"
                 },
                 {
                     "nome": "galo",
-                    "imagem": "galo.jpg"
+                    "imagem": "../img/temas/natureza/galo.jpg"
                 },
                 {
                     "nome": "gato",
-                    "imagem": "gato.jpg"
+                    "imagem": "../img/temas/natureza/gato.jpg"
                 },
                 {
                     "nome": "nuvem",
-                    "imagem": "nuvem.jpg"
+                    "imagem": "../img/temas/natureza/nuvem.jpg"
                 },
                 {
                     "nome": "rio",
-                    "imagem": "rio.jpg"
+                    "imagem": "../img/temas/natureza/rio.jpg"
                 },
                 {
                     "nome": "sol",
-                    "imagem": "sol.jpg"
+                    "imagem": "../img/temas/natureza/sol.jpg"
                 },
                 {
                     "nome": "vaca",
-                    "imagem": "vaca.jpg"
+                    "imagem": "../img/temas/natureza/vaca.jpg"
                 }
             ]
         }
