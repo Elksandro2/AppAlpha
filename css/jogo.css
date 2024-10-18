@@ -1,38 +1,32 @@
 .flex-container {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
-.forca {
-    text-align: center;
-}
-
-#palavra{
-    font-size: 50px;
-}
-
-.imagem-erro {
-    max-width: 80%;
-    height: auto;
-    max-height: 800px;
+.imagem-erro{
+    width: 300px;
+    margin-bottom: 12px;
 }
 
 .palavra-e-teclado {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px 50px;
 }
 
 .palavra-e-teclado .imagem-elemento {
     width: 80%;
     max-width: 350px;
+    height: auto;
+    max-height: 250px;
     border: 2px solid white;
     border-radius: 20px;
-    height: auto;
     margin-bottom: 20px;
+    object-fit: fill;
 }
+
 
 .palavra-e-teclado p {
     border: 2px solid white;
@@ -40,14 +34,15 @@
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .teclado button {
     width: 52px;
     height: 52px;
     margin: 2px;
-    font-size: 22px;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
@@ -73,15 +68,6 @@ tr {
         align-items: center;
     }
 
-    .forca {
-        margin-bottom: 25px;
-    }
-
-    .imagem-erro {
-        max-width: 80%;
-        max-height: 600px;
-    }
-
     .palavra-e-teclado .imagem-elemento {
         width: 80%;
         max-width: 400px;
@@ -98,16 +84,6 @@ tr {
     .flex-container {
         flex-direction: column;
         align-items: center;
-    }
-
-    .forca {
-        margin-bottom: 60px;
-    }
-
-    .imagem-erro {
-        width: 400px;
-        max-width: 80%;
-        max-height: 500px;
     }
 
     .palavra-e-teclado .imagem-elemento {
@@ -131,15 +107,6 @@ tr {
     .palavra-e-teclado .imagem-elemento {
         width: 80%;
         max-width: 300px;
-    }
-
-    .forca {
-        margin-bottom: 5px;
-    }
-
-    .imagem-erro {
-        max-width: 80%;
-        max-height: 300px;
     }
 
     .palavra-e-teclado p {

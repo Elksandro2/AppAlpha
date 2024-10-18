@@ -15,6 +15,8 @@ if (!contextoSelecionado) {
     iniciarDesafio();
 }
 
+let palavrasJogadas = [];
+
 function iniciarDesafio() {
     fetch('repositorio-palavras/desafios.json')
     .then(response => {
@@ -32,10 +34,18 @@ function iniciarDesafio() {
             window.location.href = 'contextos.html';
             return;
         }
+
+        let desafioSelecionado;
         
-        const desafioSelecionado = contextoAtual.desafios[Math.floor(Math.random() * contextoAtual.desafios.length)];
-        
-        palavraSecreta = desafioSelecionado.nome;
+        do {
+            desafioSelecionado = contextoAtual.desafios[Math.floor(Math.random() * contextoAtual.desafios.length)];
+            palavraSecreta = desafioSelecionado.nome;
+        } while (palavrasJogadas.includes(palavraSecreta));
+
+        if (!palavrasJogadas.includes(palavraSecreta)) {
+            palavrasJogadas.push(palavraSecreta);
+        }
+
         palavraAtual = Array(palavraSecreta.length).fill("_");
 
         document.getElementById('imagem-desafio').src = desafioSelecionado.imagem;
@@ -52,10 +62,10 @@ function iniciarDesafio() {
     .catch(error => console.error('Erro ao carregar o JSON:', error));
 }
 
-
 function exibirPalavra() {
     const palavraContainer = document.getElementById('palavra');
-    palavraContainer.textContent = palavraAtual.join(" ");
+    //palavraContainer.textContent = palavraAtual.join(" ");
+    palavraContainer.textContent = palavraAtual.map(letra => letra.toUpperCase()).join(" ");
     aplicarConfiguracoes();
 }
 
@@ -102,11 +112,16 @@ function proximaRodada() {
     quantidadeDesafiosJogados++;
 
     if (quantidadeDesafiosJogados < quantidadeDesafios) {
-        resetarBotoesLetras();
-        iniciarDesafio();
+        setTimeout(() => {
+            resetarBotoesLetras();
+            iniciarDesafio();
+        }, 2000); // Aguardar 2 segundos (2000 milissegundos)
     } else {
-        alert("Fim da partida! Todos os desafios foram jogados.");
-        window.location.href = 'contextos.html';
+        setTimeout(() => {
+            alert("Fim da partida! Todos os desafios foram jogados.");
+            palavrasJogadas = [];
+            window.location.href = 'contextos.html';
+        }, 2000); // Aguardar 2 segundos antes de exibir o alerta de fim
     }
 }
 
