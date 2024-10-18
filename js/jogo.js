@@ -50,7 +50,7 @@ function iniciarDesafio() {
 
         document.getElementById('imagem-desafio').src = desafioSelecionado.imagem;
         document.getElementById('imagem-desafio').onerror = function() {
-            this.src = "../img/erros/imagemIndisponivel.jpg";
+            this.src = "/img/erros/imagemIndisponivel.jpg";
         };
 
         console.log("Palavra secreta sorteada:", palavraSecreta);
@@ -115,13 +115,13 @@ function proximaRodada() {
         setTimeout(() => {
             resetarBotoesLetras();
             iniciarDesafio();
-        }, 2000); // Aguardar 2 segundos (2000 milissegundos)
+        },1000); // Aguardar 1 segundo (1000 milissegundos)
     } else {
         setTimeout(() => {
             alert("Fim da partida! Todos os desafios foram jogados.");
             palavrasJogadas = [];
             window.location.href = 'contextos.html';
-        }, 2000); // Aguardar 2 segundos antes de exibir o alerta de fim
+        }, 2000);
     }
 }
 
