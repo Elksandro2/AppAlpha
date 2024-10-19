@@ -50,3 +50,25 @@ body{
     background-color: rgb(245, 154, 49);
     color: white;
 }
+
+.a4s{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    border-radius: 40px;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.a4s:active {
+    box-shadow: 0 3px rgb(156, 94, 22);
+    transform: translateY(4px);
+}
+
+.a4s:hover {
+    background-color: rgb(245, 154, 49);
+    color: white;
+}

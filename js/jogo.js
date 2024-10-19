@@ -134,3 +134,17 @@ function resetarBotoesLetras() {
         botao.style.backgroundColor = ''; 
     });
 }
+
+document.addEventListener('keydown', function(event) {
+    const letra = event.key.toUpperCase(); // Captura a tecla pressionada
+
+    // Verifica se é uma letra de A a Z
+    if (/^[A-Z]$/.test(letra)) {
+        // Simula o clique no botão da letra correspondente
+        const botao = document.querySelector(`button[onclick="letraClicada('${letra}')"]`);
+
+        if (botao && !botao.disabled) { // Verifica se o botão existe e está habilitado
+            botao.click(); // Simula o clique no botão
+        }
+    }
+});
