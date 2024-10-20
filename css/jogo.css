@@ -17,7 +17,7 @@
 }
 
 .palavra-e-teclado .imagem-elemento {
-    width: 80%;
+    width: 100%;
     max-width: 350px;
     height: auto;
     max-height: 250px;
@@ -62,61 +62,51 @@ tr {
     margin: 2px;
 }
 
-@media (max-width: 1180px) {
-    .flex-container {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 600px) {
+    .imagem-erro {
+        width: 300px;
     }
 
-    .palavra-e-teclado .imagem-elemento {
-        width: 80%;
-        max-width: 400px;
-    }
-
-    .teclado button {
-        width: 60px;
-        height: 60px;
-        font-size: 30px;
-    }
-
-}
-@media (max-width: 770px) {
-    .flex-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .palavra-e-teclado .imagem-elemento {
-        width: 80%;
-        max-width: 320px;
-    }
-
-    .teclado button {
-        width: 55px;
-        height: 55px;
-        font-size: 30px;
-    }
-
-    .letraVariavel{
-        font-size: 70px;
-    }
-
-}
-
-@media (max-width: 630px) {
     .palavra-e-teclado .imagem-elemento {
         width: 80%;
         max-width: 300px;
+        margin-bottom: 40px;
     }
 
     .palavra-e-teclado p {
         font-size: 25px;
-        padding: 5px;
+        padding: 18px;
+        margin-bottom: 90px;
     }
 
     .teclado button {
-        width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+
+    main{
+        margin-top: 125px;
+    }
+}
+
+@media (max-width: 400px) {
+    .imagem-erro {
+        width: 200px;
+    }
+
+    .palavra-e-teclado .imagem-elemento {
+        width: 90%;
+        max-width: 240px;
+    }
+
+    .palavra-e-teclado p {
+        margin-bottom: 40px;
+    }
+
+    .teclado button {
+        width: 25px;
+        height: 45px;
         font-size: 20px;
     }
 }

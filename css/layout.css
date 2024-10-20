@@ -35,7 +35,7 @@ body{
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 20px;
-    left: 30px;
+    left: 20px;
     cursor: pointer;
     font-size: 40px;
     border: none;
@@ -56,8 +56,8 @@ body{
     height: 60px;
     background-color: white;
     position: absolute;
-    top: 100px;
-    left: 30px;
+    top: 90px;
+    left: 20px;
     border-radius: 40px;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
     cursor: pointer;
@@ -71,4 +71,11 @@ body{
 .a4s:hover {
     background-color: rgb(245, 154, 49);
     color: white;
+}
+
+@media (max-width: 580px) {
+    .voltar, .a4s{
+        width: 45px;
+        height: 45px;
+    }
 }
