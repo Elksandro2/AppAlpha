@@ -62,7 +62,39 @@ tr {
     margin: 2px;
 }
 
+.feedback {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: #14862f;
+    color: white;
+    border-radius: 10px;
+    opacity: 0; /* Oculto inicialmente */
+    transition: opacity 0.5s ease-in-out;
+}
+
+#feedback {
+    font-size: 17px;
+}
+
+.feedback.oculto {
+    opacity: 0;
+}
+
+.feedback.visivel {
+    opacity: 1;
+}
+
+.feedback.erro {
+    background-color: #dc3545;
+}
+
 @media (max-width: 600px) {
+    #feedback {
+        font-size: 13px;
+    }
+
     .imagem-erro {
         width: 300px;
     }

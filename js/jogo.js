@@ -92,9 +92,10 @@ function letraClicada(letra) {
     if (!acertou) {
         quantidadeErrosAtual++;
         if (quantidadeErrosAtual >= quantidadeErrosMaximos) {
-            alert("Você perdeu!");
+            mostrarFeedback("Palavra incorreta, continue tentando!", 'erro');
             proximaRodada();
         } else {
+            mostrarFeedback("Letra incorreta, tente novamente!", 'erro');
             atualizarImagemErro(quantidadeErrosAtual);
         }
     }
@@ -111,17 +112,20 @@ function atualizarImagemErro(quantidadeErro) {
 function proximaRodada() {
     quantidadeDesafiosJogados++;
 
+    if (quantidadeErrosAtual < quantidadeErrosMaximos) {
+        mostrarFeedback("Parabéns, continue assim!", 'sucesso');
+    }
+
     if (quantidadeDesafiosJogados < quantidadeDesafios) {
         setTimeout(() => {
             resetarBotoesLetras();
             iniciarDesafio();
-        },1000); // Aguardar 1 segundo (1000 milissegundos)
+        },3000);
     } else {
         setTimeout(() => {
-            alert("Fim da partida! Todos os desafios foram jogados.");
             palavrasJogadas = [];
             window.location.href = 'contextos.html';
-        }, 2000);
+        }, 3000);
     }
 }
 
@@ -148,3 +152,24 @@ document.addEventListener('keydown', function(event) {
         }
     }
 });
+
+function mostrarFeedback(mensagem, tipo) {
+    const feedbackElement = document.getElementById('feedback');
+    feedbackElement.innerHTML = mensagem;
+
+    const feedbackContainer = feedbackElement.parentElement; // Seleciona o contêiner principal (div)
+    feedbackContainer.classList.remove('oculto', 'erro');
+    feedbackContainer.classList.add('visivel');
+
+    if (tipo === 'erro') {
+        feedbackContainer.classList.add('erro');
+    } else {
+        feedbackContainer.classList.remove('erro');
+    }
+
+    // Remove a mensagem após o tempo determinado, exceto se for vitória
+    setTimeout(() => {
+        feedbackContainer.classList.add('oculto');
+        feedbackContainer.classList.remove('visivel');
+    }, 3000);
+}
