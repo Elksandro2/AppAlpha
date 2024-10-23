@@ -33,12 +33,17 @@ body{
     background-color: white;
     border-radius: 40px;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 20px;
-    left: 20px;
     cursor: pointer;
     font-size: 40px;
     border: none;
+}
+
+.botao-container {
+    display: flex; /* Alinha os botões em linha */
+    position: absolute; /* Permite posicionar o contêiner em relação à tela */
+    top: 20px; /* Ajuste a posição vertical conforme necessário */
+    left: 20px; /* Ajuste a posição horizontal conforme necessário */
+    gap: 10px; /* Espaçamento entre os botões */
 }
 
 .voltar:active {
@@ -51,13 +56,10 @@ body{
     color: white;
 }
 
-.a4s{
+.a4s {
     width: 60px;
     height: 60px;
     background-color: white;
-    position: absolute;
-    top: 90px;
-    left: 20px;
     border-radius: 40px;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
     cursor: pointer;

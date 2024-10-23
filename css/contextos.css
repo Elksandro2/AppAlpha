@@ -10,6 +10,12 @@ h2 {
     font-size: 50px;
 }
 
+.voltar{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
 .box {
     flex: 1 1 calc(30% - 20px); /* Cada card ocupa 25% da largura disponível, subtraindo o espaço para o gap */
     max-width: calc(30% - 20px); /* Limita a largura máxima dos cards */

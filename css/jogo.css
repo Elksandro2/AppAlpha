@@ -108,7 +108,7 @@ tr {
     .palavra-e-teclado p {
         font-size: 25px;
         padding: 18px;
-        margin-bottom: 90px;
+        margin-bottom: 60px;
     }
 
     .teclado button {
@@ -118,14 +118,11 @@ tr {
     }
 
     main{
-        margin-top: 125px;
+        margin-top: 70px;
     }
 }
 
 @media (max-width: 400px) {
-    main{
-        margin-top: 80px;
-    }
     .imagem-erro {
         width: 200px;
     }
