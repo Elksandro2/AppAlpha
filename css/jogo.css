@@ -144,9 +144,6 @@ tr {
 }
 
 @media (max-width: 345px) {
-    main{
-        margin-top: 140px;
-    }
     .teclado{
         margin-top: 40px;
     }
