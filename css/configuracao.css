@@ -11,6 +11,12 @@ h2 {
     font-size: 40px;
 }
 
+.voltar{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
 .visualizacao {
     font-size: 35px;
     display: block;
