@@ -68,7 +68,7 @@ tr {
     }
 
     .palavra-e-teclado .imagem-elemento {
-        width: 80%;
+        width: 100%;
         max-width: 300px;
         margin-bottom: 40px;
     }
@@ -80,9 +80,9 @@ tr {
     }
 
     .teclado button {
-        width: 50px;
+        width: 35px;
         height: 50px;
-        font-size: 30px;
+        font-size: 32px;
     }
 
     main{
@@ -91,6 +91,9 @@ tr {
 }
 
 @media (max-width: 400px) {
+    main{
+        margin-top: 80px;
+    }
     .imagem-erro {
         width: 200px;
     }
@@ -101,12 +104,26 @@ tr {
     }
 
     .palavra-e-teclado p {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 
     .teclado button {
-        width: 25px;
+        width: 30px;
         height: 45px;
-        font-size: 20px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 345px) {
+    main{
+        margin-top: 140px;
+    }
+    .teclado{
+        margin-top: 40px;
+    }
+    .teclado button {
+        width: 27px;
+        height: 45px;
+        font-size: 25px;
     }
 }
