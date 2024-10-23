@@ -105,7 +105,7 @@ function letraClicada(letra) {
 }
 
 function atualizarImagemErro(quantidadeErro) {
-    document.getElementById('erro').src = `/img/erros/erro${quantidadeErro}.png`;
+    document.getElementById('erro').src = `./img/erros/erro${quantidadeErro}.png`;
 }
 
 function proximaRodada() {
