@@ -64,40 +64,85 @@ h3 {
     color: white;
 }
 
-@media (max-width: 768px) {
-    .escolha-tema {
-        font-size: 25px;
-        gap: 30px;    
+@media (max-width: 1150px){
+    h2{
+        font-size: 65px;
+        margin-top: 70px;
     }
-
-    .tamanho-letra, .tipo-letra {
-        max-width: 430px;
+    
+    h3{
+        font-size: 50px;
+        margin-top: 50px;
+    }
+    
+    .escolha-tema {
+        font-size: 45px;
+        gap: 20px;   
     }
 
     .visualizacao {
-        font-size: 25px;
-        max-width: 250px;
+        font-size: 50px;
+        max-width: 380px;
     }
+}
 
-    h2 {
-        font-size: 30px;
+@media (max-width: 800px){
+    h2{
+        font-size: 50px;
     }
     
-    header p {
-        font-size: 25px;
+    h3{
+        font-size: 40px;
+    }
+    
+    .escolha-tema {
+        font-size: 35px;
+    }
+
+    .visualizacao {
+        font-size: 45px;
+        max-width: 320px;
     }
 }
 
 @media (max-width: 480px) {
+    h2{
+        font-size: 32px;
+        text-align: end;
+        margin: 20px 20px 0px 0px;
+    }
+    
+    h3{
+        font-size: 26px;
+        margin-top: 40px;
+    }
+    
+    .escolha-tema {
+        font-size: 24px;
+    }
+
+    .visualizacao {
+        font-size: 28px;
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 400px) {
+    h2{
+        font-size: 28px;
+    }
+    
+    h3{
+        font-size: 23px;
+        margin-top: 40px;
+    }
+    
     .escolha-tema {
         font-size: 22px;
-        gap: 20px;   
-        flex-direction: column;
-        align-items: center;
     }
 
     .visualizacao {
         font-size: 22px;
-        width: 80%;
+        max-width: 270px;
     }
 }
