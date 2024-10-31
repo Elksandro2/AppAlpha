@@ -26,14 +26,14 @@ body{
 }
 
 .voltar {
-    width: 60px;
-    height: 60px;
+    width: 35px;
+    height: 35px;
     color: rgb(245, 154, 49);
     background-color: white;
     border-radius: 40px;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    font-size: 40px;
+    font-size: 25px;
     border: none;
 }
 
@@ -48,8 +48,8 @@ body{
 }
 
 .a4s {
-    width: 60px;
-    height: 60px;
+    width: 35px;
+    height: 35px;
     background-color: white;
     border-radius: 40px;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
@@ -68,7 +68,7 @@ body{
 
 @media (max-width: 580px) {
     .voltar, .a4s{
-        width: 45px;
-        height: 45px;
+        width: 30px;
+        height: 30px;
     }
 }
