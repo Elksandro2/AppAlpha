@@ -14,8 +14,12 @@
 
     <header>
         <div class="botao-container">
-            <button title="VOLTAR" class="voltar" onclick="window.location.href='contextos.html'"><i class="fa-solid fa-arrow-left"></i></button>
-            <a href="https://apps4society.dcx.ufpb.br" target="_blank"><img src="img/logotipofinal.png" class="a4s" alt="apps4society"></a>
+            <div class="botoes-esquerda">
+                <button title="VOLTAR" class="voltar" onclick="window.location.href='contextos.html'"><i class="fa-solid fa-arrow-left"></i></button>
+                <a href="index.html" title="VOLTAR PARA O INÍCIO"><img src="img/alpha.png" alt="Logo alpha" class="logo-alpha"></a>
+            </div>
+            <h2 id="contexto-atual"></h2>
+            <a href="https://apps4society.dcx.ufpb.br" title="Apps4Society" target="_blank"><img src="img/logotipofinal.png" class="a4s" alt="apps4society"></a>
         </div>
     </header>
 
@@ -29,7 +33,7 @@
             </div>
             <div class="palavra-e-teclado">
                 <img src="" alt="Imagem" id="imagem-desafio" class="imagem-elemento">
-                <p id="palavra"></p>
+                <p id="palavra" class="letraVariavel"></p>
                 <div class="teclado">
                     <table>
                         <tr>

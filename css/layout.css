@@ -13,7 +13,6 @@ body{
     min-height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    padding-top: 40px;
 }
 
 @font-face {
@@ -36,14 +35,6 @@ body{
     cursor: pointer;
     font-size: 40px;
     border: none;
-}
-
-.botao-container {
-    display: flex; /* Alinha os botões em linha */
-    position: absolute; /* Permite posicionar o contêiner em relação à tela */
-    top: 20px; /* Ajuste a posição vertical conforme necessário */
-    left: 20px; /* Ajuste a posição horizontal conforme necessário */
-    gap: 10px; /* Espaçamento entre os botões */
 }
 
 .voltar:active {

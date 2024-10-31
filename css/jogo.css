@@ -5,6 +5,44 @@
     justify-content: center;
 }
 
+.botao-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    background-color: #353535;
+    margin-bottom: 1rem;
+}
+
+.botoes-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-left: -5rem;
+}
+
+.logo-alpha {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.logo-alpha:active {
+    box-shadow: 0 3px rgb(156, 94, 22);
+    transform: translateY(4px);
+}
+
+.logo-alpha:hover {
+    background-color: rgb(210, 210, 210);
+}
+
 .imagem-erro{
     width: 300px;
     margin-bottom: 12px;
@@ -119,6 +157,13 @@ tr {
 
     main{
         margin-top: 70px;
+    }
+}
+
+@media (max-width: 580px) {
+    .logo-alpha{
+        width: 45px;
+        height: 45px;
     }
 }
 

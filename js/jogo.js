@@ -35,6 +35,8 @@ function iniciarDesafio() {
             return;
         }
 
+        document.getElementById('contexto-atual').innerHTML = contextoAtual.nome.toUpperCase();
+
         let desafioSelecionado;
         
         do {
@@ -113,7 +115,7 @@ function proximaRodada() {
     quantidadeDesafiosJogados++;
 
     if (quantidadeErrosAtual < quantidadeErrosMaximos) {
-        mostrarFeedback("Parabéns, continue assim!", 'sucesso');
+        mostrarFeedback("Parabéns!", 'sucesso');
     }
 
     if (quantidadeDesafiosJogados < quantidadeDesafios) {
