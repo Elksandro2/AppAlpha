@@ -1,6 +1,9 @@
 let palavraSecreta;
 let palavraAtual;
 
+let letrasErradas = 0;
+let letrasTotaisJogadas = 0;
+
 const quantidadeErrosMaximos = 6;
 let quantidadeErrosAtual = 0;
 const quantidadeDesafios = 5;
@@ -84,6 +87,8 @@ function letraClicada(letra) {
         }
     }
 
+    letrasTotaisJogadas++;
+
     const botao = document.querySelector(`button[onclick="letraClicada('${letra}')"]`);
     botao.disabled = true;
     botao.style.color = 'white';
@@ -92,6 +97,7 @@ function letraClicada(letra) {
     exibirPalavra();
     
     if (!acertou) {
+        letrasErradas++;
         quantidadeErrosAtual++;
         if (quantidadeErrosAtual >= quantidadeErrosMaximos) {
             mostrarFeedback("Palavra incorreta, continue tentando!", 'erro');
@@ -126,6 +132,7 @@ function proximaRodada() {
     } else {
         setTimeout(() => {
             palavrasJogadas = [];
+            finalizarPartida();
             window.location.href = 'contextos.html';
         }, 3000);
     }
@@ -174,4 +181,58 @@ function mostrarFeedback(mensagem, tipo) {
         feedbackContainer.classList.add('oculto');
         feedbackContainer.classList.remove('visivel');
     }, 3000);
+}
+
+function finalizarPartida() {
+    const nomeJogador = prompt("Digite seu nome:");
+    const pontuacao = calcularPontuacao();
+
+    let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
+
+    ranking.push({ nome: nomeJogador, pontuacao: pontuacao });
+    ranking.sort((a, b) => b.pontuacao - a.pontuacao);
+
+    // Mantém apenas o Top 5
+    ranking = ranking.slice(0, 5);
+
+    localStorage.setItem("ranking", JSON.stringify(ranking));
+}
+
+function atualizarRankingNaPagina(ranking) {
+    const tabela = document.querySelector(".tabela");
+
+    // Limpa o conteúdo da tabela e adiciona o cabeçalho
+    tabela.innerHTML = `
+        <tr>
+            <th>COLOCAÇÃO</th>
+            <th>NOME</th>
+            <th>PONTUAÇÃO</th>
+        </tr>
+    `;
+
+    // Preenche a tabela com os dados do ranking
+    for (let i = 0; i < 5; i++) {
+        const jogador = ranking[i] || { nome: "-", pontuacao: "-" }; //caso não tenha os 5 jogadores
+        const linha = document.createElement("tr");
+        linha.innerHTML = `
+            <td>${i + 1}°</td>
+            <td>${jogador.nome}</td>
+            <td>${jogador.pontuacao}</td>
+        `;
+        tabela.appendChild(linha);
+    }
+}
+
+// Carrega o ranking ao carregar a página
+document.addEventListener("DOMContentLoaded", () => {
+    const ranking = JSON.parse(localStorage.getItem("ranking")) || [];
+    atualizarRankingNaPagina(ranking);
+});
+
+function calcularPontuacao() {
+    const dificuldade = Math.max(letrasTotaisJogadas / 10, 1);
+    
+    const pontuacao = (letrasTotaisJogadas - letrasErradas) * dificuldade;
+
+    return pontuacao;
 }
