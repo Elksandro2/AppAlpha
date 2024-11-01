@@ -133,7 +133,6 @@ function proximaRodada() {
         setTimeout(() => {
             palavrasJogadas = [];
             finalizarPartida();
-            window.location.href = 'contextos.html';
         }, 3000);
     }
 }
@@ -149,15 +148,21 @@ function resetarBotoesLetras() {
 }
 
 document.addEventListener('keydown', function(event) {
-    const letra = event.key.toUpperCase(); // Captura a tecla pressionada
+    // Verifica se o foco está no campo de input de texto
+    const isInputFocused = document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA';
 
-    // Verifica se é uma letra de A a Z
-    if (/^[A-Z]$/.test(letra)) {
-        // Simula o clique no botão da letra correspondente
-        const botao = document.querySelector(`button[onclick="letraClicada('${letra}')"]`);
+    // Só processa as teclas se o foco não estiver em um input
+    if (!isInputFocused) {
+        const letra = event.key.toUpperCase(); // Captura a tecla pressionada
 
-        if (botao && !botao.disabled) { // Verifica se o botão existe e está habilitado
-            botao.click(); // Simula o clique no botão
+        // Verifica se é uma letra de A a Z
+        if (/^[A-Z]$/.test(letra)) {
+            // Simula o clique no botão da letra correspondente
+            const botao = document.querySelector(`button[onclick="letraClicada('${letra}')"]`);
+
+            if (botao && !botao.disabled) { // Verifica se o botão existe e está habilitado
+                botao.click(); // Simula o clique no botão
+            }
         }
     }
 });
@@ -184,18 +189,42 @@ function mostrarFeedback(mensagem, tipo) {
 }
 
 function finalizarPartida() {
-    const nomeJogador = prompt("Digite seu nome:");
+    // Exibe o formulário de nome ao final do jogo
+    const nomeForm = document.querySelector('.recuperar-nome');
+    nomeForm.style.display = 'block';  // Mostra a caixa de nome
+
+    // Calcula a pontuação
     const pontuacao = calcularPontuacao();
 
-    let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
+    // Adiciona um listener para o envio do nome
+    const form = document.querySelector('.recuperar-nome form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o comportamento padrão de recarregar a página
 
-    ranking.push({ nome: nomeJogador, pontuacao: pontuacao });
-    ranking.sort((a, b) => b.pontuacao - a.pontuacao);
+        const nomeJogador = document.getElementById('nomeJogador').value;
 
-    // Mantém apenas o Top 5
-    ranking = ranking.slice(0, 5);
+        if (nomeJogador) {
+            let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
 
-    localStorage.setItem("ranking", JSON.stringify(ranking));
+            ranking.push({ nome: nomeJogador, pontuacao: pontuacao });
+            ranking.sort((a, b) => b.pontuacao - a.pontuacao);
+
+            // Mantém apenas o Top 5
+            ranking = ranking.slice(0, 5);
+
+            localStorage.setItem("ranking", JSON.stringify(ranking));
+
+            // Oculta o formulário de nome após o envio
+            nomeForm.style.display = 'none';
+
+            // Redireciona para a página de contextos após o nome ser salvo
+            setTimeout(() => {
+                window.location.href = 'contextos.html';
+            }, 1000);
+        } else {
+            alert("Por favor, insira um nome antes de confirmar.");
+        }
+    });
 }
 
 function atualizarRankingNaPagina(ranking) {

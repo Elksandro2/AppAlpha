@@ -117,16 +117,59 @@ tr {
     font-size: 17px;
 }
 
-.feedback.oculto {
+.feedback .oculto {
     opacity: 0;
 }
 
-.feedback.visivel {
+.feedback .visivel {
     opacity: 1;
 }
 
 .feedback.erro {
     background-color: #dc3545;
+}
+
+.recuperar-nome {
+    width: 300px;
+    height: 130px;
+    background-color: #1c56a1;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin: auto;
+    text-align: start;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    position: absolute;
+    top: 40%;
+    left: 37%;
+    display: none;
+}
+
+.recuperar-nome input {
+    margin: 10px 0px 15px;
+    height: 25px;
+    width: 220px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.confimar {
+    text-align: center;
+}
+
+.confimar button {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 4px;
+    background-color: #fff;
+    color: #14862f;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.confimar button:hover {
+    background-color: #14862f;
+    color: #fff;
 }
 
 @media (max-width: 600px) {
@@ -136,6 +179,7 @@ tr {
     }
     .feedback{
         top: 50px;
+        right: 15px;
     }
 
     #feedback {
