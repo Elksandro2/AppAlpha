@@ -173,6 +173,10 @@ tr {
 }
 
 @media (max-width: 600px) {
+    .recuperar-nome {
+        top: 30%;
+        left: 13%;
+    }
     h2{
         font-size: 1.4rem;
         margin-left: -1.3rem;

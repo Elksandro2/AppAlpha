@@ -263,5 +263,5 @@ function calcularPontuacao() {
     
     const pontuacao = (letrasTotaisJogadas - letrasErradas) * dificuldade;
 
-    return pontuacao;
+    return parseFloat(pontuacao.toFixed(2));
 }
