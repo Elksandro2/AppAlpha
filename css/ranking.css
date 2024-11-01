@@ -39,7 +39,7 @@ td {
 
 @media (max-width: 770px) {
     h2 {
-        font-size: 45px;
+        font-size: 2rem;
     }
     .tabela {
         font-size: 30px;
