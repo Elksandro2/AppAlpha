@@ -22,7 +22,7 @@
 }
 
 h2 {
-    font-size: 1.7rem;
+    font-size: 2rem;
     margin-left: -5rem;
 }
 
@@ -109,24 +109,11 @@ tr {
     background-color: #14862f;
     color: white;
     border-radius: 10px;
-    opacity: 0; /* Oculto inicialmente */
-    transition: opacity 0.5s ease-in-out;
+    display: none;
 }
 
 #feedback {
     font-size: 17px;
-}
-
-.feedback .oculto {
-    opacity: 0;
-}
-
-.feedback .visivel {
-    opacity: 1;
-}
-
-.feedback.erro {
-    background-color: #dc3545;
 }
 
 .recuperar-nome {

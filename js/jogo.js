@@ -69,8 +69,7 @@ function iniciarDesafio() {
 
 function exibirPalavra() {
     const palavraContainer = document.getElementById('palavra');
-    //palavraContainer.textContent = palavraAtual.join(" ");
-    palavraContainer.textContent = palavraAtual.map(letra => letra.toUpperCase()).join(" ");
+    palavraContainer.textContent = palavraAtual.join(" ");
     aplicarConfiguracoes();
 }
 
@@ -171,20 +170,19 @@ function mostrarFeedback(mensagem, tipo) {
     const feedbackElement = document.getElementById('feedback');
     feedbackElement.innerHTML = mensagem;
 
-    const feedbackContainer = feedbackElement.parentElement; // Seleciona o contêiner principal (div)
-    feedbackContainer.classList.remove('oculto', 'erro');
-    feedbackContainer.classList.add('visivel');
+    const feedbackContainer = feedbackElement.parentElement;
+
+    feedbackContainer.style.display = 'block';
 
     if (tipo === 'erro') {
-        feedbackContainer.classList.add('erro');
+        feedbackContainer.style.backgroundColor = '#dc3545'; // Cor de erro
     } else {
-        feedbackContainer.classList.remove('erro');
+        feedbackContainer.style.backgroundColor = '#14862f'; // Cor de sucesso
     }
 
-    // Remove a mensagem após o tempo determinado, exceto se for vitória
+    // Remove a mensagem após o tempo determinado
     setTimeout(() => {
-        feedbackContainer.classList.add('oculto');
-        feedbackContainer.classList.remove('visivel');
+        feedbackContainer.style.display = 'none'; // Oculta o feedback
     }, 3000);
 }
 
