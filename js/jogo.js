@@ -1,6 +1,10 @@
 let palavraSecreta;
 let palavraAtual;
 
+const corLetraIncorreta = "#ffd700";
+const corPalavraIncorreta = "#dc3545";
+const corPalavraCerta = "#14862f";
+
 let letrasErradas = 0;
 let letrasTotaisJogadas = 0;
 
@@ -99,10 +103,10 @@ function letraClicada(letra) {
         letrasErradas++;
         quantidadeErrosAtual++;
         if (quantidadeErrosAtual >= quantidadeErrosMaximos) {
-            mostrarFeedback("Palavra incorreta, continue tentando!", 'erro');
+            mostrarFeedback("Palavra incorreta, continue tentando!", 'palavraIncorreta');
             proximaRodada();
         } else {
-            mostrarFeedback("Letra incorreta, tente novamente!", 'erro');
+            mostrarFeedback("Letra incorreta, tente novamente!", 'letraIncorreta');
             atualizarImagemErro(quantidadeErrosAtual);
         }
     }
@@ -120,7 +124,7 @@ function proximaRodada() {
     quantidadeDesafiosJogados++;
 
     if (quantidadeErrosAtual < quantidadeErrosMaximos) {
-        mostrarFeedback("Parabéns!", 'sucesso');
+        mostrarFeedback("Parabéns!", 'palavraCerta');
     }
 
     if (quantidadeDesafiosJogados < quantidadeDesafios) {
@@ -174,10 +178,12 @@ function mostrarFeedback(mensagem, tipo) {
 
     feedbackContainer.style.display = 'block';
 
-    if (tipo === 'erro') {
-        feedbackContainer.style.backgroundColor = '#dc3545'; // Cor de erro
+    if (tipo === 'letraIncorreta') {
+        feedbackContainer.style.backgroundColor = corLetraIncorreta;
+    } else if (tipo === 'palavraIncorreta') {
+        feedbackContainer.style.backgroundColor = corPalavraIncorreta;
     } else {
-        feedbackContainer.style.backgroundColor = '#14862f'; // Cor de sucesso
+        feedbackContainer.style.backgroundColor = corPalavraCerta;
     }
 
     // Remove a mensagem após o tempo determinado
