@@ -17,7 +17,7 @@ const contextoSelecionado = localStorage.getItem('contextoSelecionado');
 
 if (!contextoSelecionado) {
     alert("Nenhum contexto selecionado. Voltando à página anterior.");
-    window.location.href = 'contextos.html'; // Volta à página de seleção se não tiver um contexto
+    window.location.href = 'contextos.html';
 } else{
     iniciarDesafio();
 }
@@ -188,7 +188,7 @@ function mostrarFeedback(mensagem, tipo) {
 
     // Remove a mensagem após o tempo determinado
     setTimeout(() => {
-        feedbackContainer.style.display = 'none'; // Oculta o feedback
+        feedbackContainer.style.display = 'none';
     }, 3000);
 }
 
@@ -197,7 +197,6 @@ function finalizarPartida() {
 
     document.getElementById('pontuacao-jogador').innerHTML = "Sua pontuação: " + pontuacao;
 
-    // Exibe o formulário de nome ao final do jogo
     const nomeForm = document.querySelector('.recuperar-nome');
     nomeForm.style.display = 'block';  // Mostra a caixa de nome
 
@@ -219,7 +218,6 @@ function finalizarPartida() {
 
             localStorage.setItem("ranking", JSON.stringify(ranking));
 
-            // Oculta o formulário de nome após o envio
             nomeForm.style.display = 'none';
 
             // Redireciona para a página de contextos após o nome ser salvo
