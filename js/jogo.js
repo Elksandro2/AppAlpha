@@ -1,7 +1,7 @@
 let palavraSecreta;
 let palavraAtual;
 
-const corLetraIncorreta = "#ffd700";
+const corLetraIncorreta = "#d1b200";
 const corPalavraIncorreta = "#dc3545";
 const corPalavraCerta = "#14862f";
 

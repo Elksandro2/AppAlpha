@@ -14,6 +14,8 @@ header {
     margin-bottom: 1rem;
     max-width: 100vw;
     position: relative;
+    background-color: rgb(6, 84, 112);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.8);
 }
 
 h2 {
