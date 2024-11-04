@@ -193,12 +193,13 @@ function mostrarFeedback(mensagem, tipo) {
 }
 
 function finalizarPartida() {
+    const pontuacao = calcularPontuacao();
+
+    document.getElementById('pontuacao-jogador').innerHTML = "Sua pontuação: " + pontuacao;
+
     // Exibe o formulário de nome ao final do jogo
     const nomeForm = document.querySelector('.recuperar-nome');
     nomeForm.style.display = 'block';  // Mostra a caixa de nome
-
-    // Calcula a pontuação
-    const pontuacao = calcularPontuacao();
 
     // Adiciona um listener para o envio do nome
     const form = document.querySelector('.recuperar-nome form');
