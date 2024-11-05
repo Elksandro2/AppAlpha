@@ -262,9 +262,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function calcularPontuacao() {
-    const dificuldade = Math.max(letrasTotaisJogadas / 10, 1);
+    const acertos = letrasTotaisJogadas - letrasErradas;
+    const tentativas = letrasTotaisJogadas;
+    let pontuacao = 0;
     
-    const pontuacao = (letrasTotaisJogadas - letrasErradas) * dificuldade;
+    if (acertos > 0){
+        pontuacao = (acertos / tentativas) * 100;
+    }
 
     return parseFloat(pontuacao.toFixed(2));
 }
