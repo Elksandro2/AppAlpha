@@ -103,7 +103,7 @@ function letraClicada(letra) {
         letrasErradas++;
         quantidadeErrosAtual++;
         if (quantidadeErrosAtual >= quantidadeErrosMaximos) {
-            mostrarFeedback("Palavra incorreta, continue tentando!", 'palavraIncorreta');
+            mostrarFeedback("Palavra incorreta!", 'palavraIncorreta');
             proximaRodada();
         } else {
             mostrarFeedback("Letra incorreta, tente novamente!", 'letraIncorreta');
@@ -222,7 +222,7 @@ function finalizarPartida() {
 
             // Redireciona para a página de contextos após o nome ser salvo
             setTimeout(() => {
-                window.location.href = 'contextos.html';
+                window.location.href = 'ranking.html';
             }, 1000);
         } else {
             alert("Por favor, insira um nome antes de confirmar.");

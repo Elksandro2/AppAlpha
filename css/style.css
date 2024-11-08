@@ -8,6 +8,7 @@
 p {
     font-size: 1.2rem;
     margin: .4rem 0 1rem;
+    font-weight: 700;
 }
 
 .logo {
@@ -37,7 +38,7 @@ p {
 }
 
 .iniciar .botao {
-    background-color: rgba(6, 112, 169, 0.5);
+    background-color: rgba(15, 127, 168);
 }
 
 .ranking .botao, .configuracoes .botao {
