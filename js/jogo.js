@@ -1,21 +1,21 @@
 let palavraSecreta;
 let palavraAtual;
 
-const corLetraIncorreta = "#d1b200";
-const corPalavraIncorreta = "#dc3545";
-const corPalavraCerta = "#14862f";
+const COR_LETRA_INCORRETA = "#d1b200";
+const COR_PALAVRA_INCORRETA = "#dc3545";
+const COR_PALAVRA_CERTA = "#14862f";
 
 let letrasErradas = 0;
 let letrasTotaisJogadas = 0;
 
-const quantidadeErrosMaximos = 6;
+const QUANTIDADE_ERROS_MAXIMOS = 6;
 let quantidadeErrosAtual = 0;
-const quantidadeDesafios = 5;
+const QUANTIDADE_DESAFIOS = 5;
 let quantidadeDesafiosJogados = 0;
 
-const contextoSelecionado = localStorage.getItem('contextoSelecionado');
+const CONTEXTO_SELECIONADO = localStorage.getItem('contextoSelecionado');
 
-if (!contextoSelecionado) {
+if (!CONTEXTO_SELECIONADO) {
     alert("Nenhum contexto selecionado. Voltando à página anterior.");
     window.location.href = 'contextos.html';
 } else{
@@ -33,21 +33,21 @@ function iniciarDesafio() {
         return response.json();
     })
     .then(data => {
-        const contextos = data.contextos;
-        const contextoAtual = contextos.find(contexto => contexto.nome.toLowerCase() === contextoSelecionado.toLowerCase());
+        const CONTEXTOS = data.contextos;
+        const CONTEXTO_ATUAL = CONTEXTOS.find(contexto => contexto.nome.toLowerCase() === CONTEXTO_SELECIONADO.toLowerCase());
         
-        if (!contextoAtual) {
+        if (!CONTEXTO_ATUAL) {
             alert("Contexto não encontrado.");
             window.location.href = 'contextos.html';
             return;
         }
 
-        document.getElementById('contexto-atual').innerHTML = contextoAtual.nome.toUpperCase();
+        document.getElementById('contexto-atual').innerHTML = CONTEXTO_ATUAL.nome.toUpperCase();
 
         let desafioSelecionado;
         
         do {
-            desafioSelecionado = contextoAtual.desafios[Math.floor(Math.random() * contextoAtual.desafios.length)];
+            desafioSelecionado = CONTEXTO_ATUAL.desafios[Math.floor(Math.random() * CONTEXTO_ATUAL.desafios.length)];
             palavraSecreta = desafioSelecionado.nome;
         } while (palavrasJogadas.includes(palavraSecreta));
 
@@ -72,8 +72,8 @@ function iniciarDesafio() {
 }
 
 function exibirPalavra() {
-    const palavraContainer = document.getElementById('palavra');
-    palavraContainer.textContent = palavraAtual.join(" ");
+    const PALAVRA_CONTAINER = document.getElementById('palavra');
+    PALAVRA_CONTAINER.textContent = palavraAtual.join(" ");
     aplicarConfiguracoes();
 }
 
@@ -81,10 +81,10 @@ function letraClicada(letra) {
     let acertou = false;
     
     for (let i = 0; i < palavraSecreta.length; i++) {
-        const letraNormalizadaPalavra = palavraSecreta[i].normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-        const letraNormalizadaClicada = letra.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        const LETRA_NORMALIZADA_PALAVRA = palavraSecreta[i].normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        const LETRA_NORMALIZADA_CLICADA = letra.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
-        if (letraNormalizadaPalavra === letraNormalizadaClicada) {
+        if (LETRA_NORMALIZADA_PALAVRA === LETRA_NORMALIZADA_CLICADA) {
             palavraAtual[i] = palavraSecreta[i];
             acertou = true;
         }
@@ -92,17 +92,17 @@ function letraClicada(letra) {
 
     letrasTotaisJogadas++;
 
-    const botao = document.querySelector(`button[onclick="letraClicada('${letra}')"]`);
-    botao.disabled = true;
-    botao.style.color = 'white';
-    botao.style.backgroundColor = acertou ? 'green' : 'red';
+    const BOTAO = document.querySelector(`button[onclick="letraClicada('${letra}')"]`);
+    BOTAO.disabled = true;
+    BOTAO.style.color = 'white';
+    BOTAO.style.backgroundColor = acertou ? 'green' : 'red';
 
     exibirPalavra();
     
     if (!acertou) {
         letrasErradas++;
         quantidadeErrosAtual++;
-        if (quantidadeErrosAtual >= quantidadeErrosMaximos) {
+        if (quantidadeErrosAtual >= QUANTIDADE_ERROS_MAXIMOS) {
             mostrarFeedback("Palavra incorreta!", 'palavraIncorreta');
             proximaRodada();
         } else {
@@ -123,11 +123,11 @@ function atualizarImagemErro(quantidadeErro) {
 function proximaRodada() {
     quantidadeDesafiosJogados++;
 
-    if (quantidadeErrosAtual < quantidadeErrosMaximos) {
+    if (quantidadeErrosAtual < QUANTIDADE_ERROS_MAXIMOS) {
         mostrarFeedback("Parabéns!", 'palavraCerta');
     }
 
-    if (quantidadeDesafiosJogados < quantidadeDesafios) {
+    if (quantidadeDesafiosJogados < QUANTIDADE_DESAFIOS) {
         setTimeout(() => {
             resetarBotoesLetras();
             iniciarDesafio();
@@ -141,9 +141,9 @@ function proximaRodada() {
 }
 
 function resetarBotoesLetras() {
-    const botoes = document.querySelectorAll('button[onclick^="letraClicada"]');
+    const BOTOES = document.querySelectorAll('button[onclick^="letraClicada"]');
     
-    botoes.forEach(botao => {
+    BOTOES.forEach(botao => {
         botao.disabled = false;
         botao.style.color = '';
         botao.style.backgroundColor = ''; 
@@ -152,65 +152,65 @@ function resetarBotoesLetras() {
 
 document.addEventListener('keydown', function(event) {
     // Verifica se o foco está no campo de input de texto
-    const isInputFocused = document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA';
+    const IS_INPUT_FOCUSED = document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA';
 
     // Só processa as teclas se o foco não estiver em um input
-    if (!isInputFocused) {
-        const letra = event.key.toUpperCase(); // Captura a tecla pressionada
+    if (!IS_INPUT_FOCUSED) {
+        const LETRA = event.key.toUpperCase(); // Captura a tecla pressionada
 
         // Verifica se é uma letra de A a Z
-        if (/^[A-Z]$/.test(letra)) {
+        if (/^[A-Z]$/.test(LETRA)) {
             // Simula o clique no botão da letra correspondente
-            const botao = document.querySelector(`button[onclick="letraClicada('${letra}')"]`);
+            const BOTAO = document.querySelector(`button[onclick="letraClicada('${LETRA}')"]`);
 
-            if (botao && !botao.disabled) { // Verifica se o botão existe e está habilitado
-                botao.click(); // Simula o clique no botão
+            if (BOTAO && !BOTAO.disabled) { // Verifica se o botão existe e está habilitado
+                BOTAO.click(); // Simula o clique no botão
             }
         }
     }
 });
 
 function mostrarFeedback(mensagem, tipo) {
-    const feedbackElement = document.getElementById('feedback');
-    feedbackElement.innerHTML = mensagem;
+    const FEEDBACK_ELEMENTO = document.getElementById('feedback');
+    FEEDBACK_ELEMENTO.innerHTML = mensagem;
 
-    const feedbackContainer = feedbackElement.parentElement;
+    const FEEDBACK_CONTAINER = FEEDBACK_ELEMENTO.parentElement;
 
-    feedbackContainer.style.display = 'block';
+    FEEDBACK_CONTAINER.style.display = 'block';
 
     if (tipo === 'letraIncorreta') {
-        feedbackContainer.style.backgroundColor = corLetraIncorreta;
+        FEEDBACK_CONTAINER.style.backgroundColor = COR_LETRA_INCORRETA;
     } else if (tipo === 'palavraIncorreta') {
-        feedbackContainer.style.backgroundColor = corPalavraIncorreta;
+        FEEDBACK_CONTAINER.style.backgroundColor = COR_PALAVRA_INCORRETA;
     } else {
-        feedbackContainer.style.backgroundColor = corPalavraCerta;
+        FEEDBACK_CONTAINER.style.backgroundColor = COR_PALAVRA_CERTA;
     }
 
     // Remove a mensagem após o tempo determinado
     setTimeout(() => {
-        feedbackContainer.style.display = 'none';
-    }, 3000);
+        FEEDBACK_CONTAINER.style.display = 'none';
+    }, 5000);
 }
 
 function finalizarPartida() {
-    const pontuacao = calcularPontuacao();
+    const PONTUACAO = calcularPontuacao();
 
-    document.getElementById('pontuacao-jogador').innerHTML = "Sua pontuação: " + pontuacao;
+    document.getElementById('pontuacao-jogador').innerHTML = "Sua pontuação: " + PONTUACAO;
 
-    const nomeForm = document.querySelector('.recuperar-nome');
-    nomeForm.style.display = 'block';  // Mostra a caixa de nome
+    const NOME_FORM = document.querySelector('.recuperar-nome');
+    NOME_FORM.style.display = 'block';
 
     // Adiciona um listener para o envio do nome
-    const form = document.querySelector('.recuperar-nome form');
-    form.addEventListener('submit', function(event) {
+    const FORM = document.querySelector('.recuperar-nome form');
+    FORM.addEventListener('submit', function(event) {
         event.preventDefault(); // Impede o comportamento padrão de recarregar a página
 
-        const nomeJogador = document.getElementById('nomeJogador').value;
+        const NOME_JOGADOR = document.getElementById('nomeJogador').value;
 
-        if (nomeJogador) {
+        if (NOME_JOGADOR) {
             let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
 
-            ranking.push({ nome: nomeJogador, pontuacao: pontuacao });
+            ranking.push({ nome: NOME_JOGADOR, pontuacao: PONTUACAO });
             ranking.sort((a, b) => b.pontuacao - a.pontuacao);
 
             // Mantém apenas o Top 5
@@ -218,11 +218,15 @@ function finalizarPartida() {
 
             localStorage.setItem("ranking", JSON.stringify(ranking));
 
-            nomeForm.style.display = 'none';
+            NOME_FORM.style.display = 'none';
 
             // Redireciona para a página de contextos após o nome ser salvo
             setTimeout(() => {
-                window.location.href = 'ranking.html';
+                if (ranking.some(jogador => jogador.nome === NOME_JOGADOR)){
+                    window.location.href = "ranking.html";
+                } else {
+                    window.location.href = "contextos.html";
+                }
             }, 1000);
         } else {
             alert("Por favor, insira um nome antes de confirmar.");
@@ -230,45 +234,13 @@ function finalizarPartida() {
     });
 }
 
-function atualizarRankingNaPagina(ranking) {
-    const tabela = document.querySelector(".tabela");
-
-    // Limpa o conteúdo da tabela e adiciona o cabeçalho
-    tabela.innerHTML = `
-        <tr>
-            <th>COLOCAÇÃO</th>
-            <th>NOME</th>
-            <th>PONTUAÇÃO</th>
-        </tr>
-    `;
-
-    // Preenche a tabela com os dados do ranking
-    for (let i = 0; i < 5; i++) {
-        const jogador = ranking[i] || { nome: "-", pontuacao: "-" }; //caso não tenha os 5 jogadores
-        const linha = document.createElement("tr");
-        linha.innerHTML = `
-            <td>${i + 1}°</td>
-            <td>${jogador.nome}</td>
-            <td>${jogador.pontuacao}</td>
-        `;
-        tabela.appendChild(linha);
-    }
-}
-
-// Carrega o ranking ao carregar a página
-document.addEventListener("DOMContentLoaded", () => {
-    const ranking = JSON.parse(localStorage.getItem("ranking")) || [];
-    atualizarRankingNaPagina(ranking);
-});
-
 function calcularPontuacao() {
-    const acertos = letrasTotaisJogadas - letrasErradas;
-    const tentativas = letrasTotaisJogadas;
-    let pontuacao = 0;
+    const ACERTOS = letrasTotaisJogadas - letrasErradas;
     
-    if (acertos > 0){
-        pontuacao = (acertos / tentativas) * 100;
+    if (ACERTOS > 0) {
+        pontuacao = (ACERTOS / letrasTotaisJogadas) * 100;
+        return parseFloat(pontuacao.toFixed(2));
     }
-
-    return parseFloat(pontuacao.toFixed(2));
+    
+    return 0;
 }
