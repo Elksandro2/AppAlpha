@@ -213,9 +213,6 @@ function finalizarPartida() {
             ranking.push({ nome: NOME_JOGADOR, pontuacao: PONTUACAO });
             ranking.sort((a, b) => b.pontuacao - a.pontuacao);
 
-            // Mantém apenas o Top 5
-            ranking = ranking.slice(0, 5);
-
             localStorage.setItem("ranking", JSON.stringify(ranking));
 
             NOME_FORM.style.display = 'none';

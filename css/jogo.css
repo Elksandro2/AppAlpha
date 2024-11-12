@@ -24,17 +24,15 @@
 
 h2 {
     font-size: 2rem;
-    margin-left: -5rem;
+    margin-left: -10rem;
 }
 
 .logo-alpha {
-    width: 35px;
+    width: 130px;
     height: 35px;
-    margin-top: 3px;
-    background-color: #fff;
     border-radius: 100px;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    border: none;
 }
 
 .logo-alpha:active {
@@ -43,7 +41,7 @@ h2 {
 }
 
 .logo-alpha:hover {
-    background-color: rgb(209, 205, 175)
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.8);
 }
 
 .imagem-erro{
@@ -168,7 +166,7 @@ tr {
     }
     h2{
         font-size: 1.4rem;
-        margin-left: -1.3rem;
+        margin: auto;
     }
     .feedback{
         top: 50px;
@@ -207,8 +205,8 @@ tr {
 }
 
 @media (max-width: 580px) {
-    .logo-alpha{
-        width: 30px;
+    .logo-alpha {
+        width: 100px;
         height: 30px;
     }
 }
