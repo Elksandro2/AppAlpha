@@ -121,6 +121,12 @@ function atualizarImagemErro(quantidadeErro) {
 }
 
 function proximaRodada() {
+    const BOTOES = document.querySelectorAll('button[onclick^="letraClicada"]');
+    
+    BOTOES.forEach(botao => {
+        botao.disabled = true;
+    });
+    
     quantidadeDesafiosJogados++;
 
     if (quantidadeErrosAtual < QUANTIDADE_ERROS_MAXIMOS) {
@@ -193,6 +199,12 @@ function mostrarFeedback(mensagem, tipo) {
 }
 
 function finalizarPartida() {
+    const BOTOES = document.querySelectorAll('button[onclick^="letraClicada"]');
+    
+    BOTOES.forEach(botao => {
+        botao.disabled = true;
+    });
+
     const PONTUACAO = calcularPontuacao();
 
     document.getElementById('pontuacao-jogador').innerHTML = "Sua pontuação: " + PONTUACAO;
