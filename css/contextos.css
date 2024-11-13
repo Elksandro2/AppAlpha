@@ -74,6 +74,9 @@ h2 {
 }
 
 @media (max-width: 480px) {
+    h2 {
+        font-size: 1.6rem;
+    }
     .box {
         flex: 1 1 calc(80% - 20px); /* Um card por linha */
         max-width: calc(80% - 20px);

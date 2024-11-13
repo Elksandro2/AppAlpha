@@ -121,12 +121,8 @@ function atualizarImagemErro(quantidadeErro) {
 }
 
 function proximaRodada() {
-    const BOTOES = document.querySelectorAll('button[onclick^="letraClicada"]');
-    
-    BOTOES.forEach(botao => {
-        botao.disabled = true;
-    });
-    
+    desabilitarBotoes();
+
     quantidadeDesafiosJogados++;
 
     if (quantidadeErrosAtual < QUANTIDADE_ERROS_MAXIMOS) {
@@ -199,11 +195,7 @@ function mostrarFeedback(mensagem, tipo) {
 }
 
 function finalizarPartida() {
-    const BOTOES = document.querySelectorAll('button[onclick^="letraClicada"]');
-    
-    BOTOES.forEach(botao => {
-        botao.disabled = true;
-    });
+    desabilitarBotoes();
 
     const PONTUACAO = calcularPontuacao();
 
@@ -252,4 +244,12 @@ function calcularPontuacao() {
     }
     
     return 0;
+}
+
+function desabilitarBotoes() {
+    const BOTOES = document.querySelectorAll('button[onclick^="letraClicada"]');
+    
+    BOTOES.forEach(botao => {
+        botao.disabled = true;
+    });
 }
