@@ -64,7 +64,7 @@ h3 {
     width: 80px;
     height: 80px;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #fff;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
     color: rgb(245, 154, 49);
     padding: 5px;

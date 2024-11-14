@@ -39,6 +39,22 @@ td {
     padding: 30px;
 }
 
+.zerar-ranking {
+    border: none;
+    padding: .5rem;
+    background-color: #fff;
+    color: rgb(6, 84, 112);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: .5rem;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.zerar-ranking:hover {
+    background-color: rgb(6, 84, 112);
+    color: white;
+}
+
 @media (max-width: 770px) {
     .tabela {
         font-size: 30px;
