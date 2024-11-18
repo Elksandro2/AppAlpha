@@ -4,7 +4,7 @@ Aplicação Web do **AppAlpha**, um jogo criado para auxiliar crianças no proce
 
 ## Descrição
 
-O **AppAlpha Web** é uma adaptação o aplicativo original, com o objetivo de ajudar crianças a formar palavras a partir de imagens. A interface é intuitiva e acessível, oferecendo uma boa experiência.
+O **AppAlpha Web** é uma adaptação do aplicativo original [AppAlpha](https://github.com/a4s-ufpb/AppAlpha), com o objetivo de ajudar crianças a formar palavras a partir de imagens. A interface é intuitiva e acessível, oferecendo uma boa experiência.
 
 ## Funcionalidades
 
@@ -23,4 +23,4 @@ Acesse o projeto em: [AppAlpha Web](https://a4s-ufpb.github.io/AppAlpha_Web/)
 
 ## Sobre o Autor
 
-Desenvolvido por **José Elksandro**, aluno de **Sistemas de Informação (SI)** na UFPB, Campus IV (Rio Tinto). Este projeto faz parte do Apps4Society, que busca criar soluções tecnológicas com impacto social positivo.
+Desenvolvido por **José Elksandro**, aluno de **Sistemas de Informação (SI)** na UFPB, Campus IV (Rio Tinto). Este projeto, orientado pela professora [Ayla Rebouças](https://github.com/ayladebora) faz parte do Apps4Society, que busca criar soluções tecnológicas com impacto social positivo.
