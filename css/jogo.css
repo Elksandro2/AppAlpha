@@ -173,6 +173,11 @@ tr {
         right: 10px;
     }
 
+    .logo-alpha {
+        background-color: rgba(6, 84, 112, 0.3);
+        border-radius: 5px;
+    }
+
     .logo-link {
         top: 50px;
     }
