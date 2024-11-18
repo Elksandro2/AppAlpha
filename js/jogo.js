@@ -217,6 +217,9 @@ function finalizarPartida() {
             ranking.push({ nome: NOME_JOGADOR, pontuacao: PONTUACAO });
             ranking.sort((a, b) => b.pontuacao - a.pontuacao);
 
+            // Mantém apenas o Top 5
+            ranking = ranking.slice(0, 5);
+            
             localStorage.setItem("ranking", JSON.stringify(ranking));
 
             NOME_FORM.style.display = 'none';
@@ -251,5 +254,17 @@ function desabilitarBotoes() {
     
     BOTOES.forEach(botao => {
         botao.disabled = true;
+    });
+}
+
+function exibirOcultarBotoes() {
+    const BOTOES = document.querySelectorAll('.hamburguer-botoes');
+
+    BOTOES.forEach(botao => {
+        if (botao.style.display == "block") {
+            botao.style.display = "none";
+        } else {
+            botao.style.display = "block";
+        }
     });
 }

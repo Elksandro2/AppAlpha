@@ -5,7 +5,7 @@
     justify-content: center;
 }
 
-.botao-container {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,18 +30,11 @@ h2 {
 .logo-alpha {
     width: 130px;
     height: 35px;
-    border-radius: 100px;
     cursor: pointer;
-    border: none;
-}
-
-.logo-alpha:active {
-    box-shadow: 0 3px rgb(156, 94, 22);
-    transform: translateY(4px);
 }
 
 .logo-alpha:hover {
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
 }
 
 .imagem-erro{
@@ -160,11 +153,43 @@ tr {
     color: #fff;
 }
 
+.hamburguer {
+    display: none;
+}
+
+.hamburguer i {
+    font-size: 1.4rem;
+}
+
 @media (max-width: 600px) {
+    .hamburguer {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburguer-botoes {
+        display: none;
+        position: absolute;
+        right: 10px;
+    }
+
+    .logo-link {
+        top: 50px;
+    }
+
+    .a4s-link {
+        top: 90px;
+    }  
+
+    .voltar {
+        top: 130px;
+    }      
+
     h2{
         font-size: 1.6rem;
-        margin-left: -1.5rem;
+        margin: auto;
     }
+
     .feedback{
         top: 50px;
         right: 15px;

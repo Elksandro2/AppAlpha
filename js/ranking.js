@@ -38,6 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function zerarRanking() {
-    localStorage.removeItem("ranking");
-    atualizarRankingNaPagina([]); // Atualiza a exibição da tabela com o ranking vazio
+    const CONFIRMACAO = confirm("Deseja zerar o ranking?")
+
+    if(CONFIRMACAO){
+        localStorage.removeItem("ranking");
+        atualizarRankingNaPagina([]); // Atualiza a exibição da tabela com o ranking vazio
+    }
 }
