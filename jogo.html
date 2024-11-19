@@ -14,17 +14,17 @@
 
     <header>
         <div class="botoes-esquerda">
-            <button title="VOLTAR" class="voltar hamburguer-botoes" onclick="window.location.href='contextos.html'">
+            <button title="VOLTAR" class="voltar hamburguer-botoes" onclick="mostrarConfirmacaoSairTela('Tem certeza que deseja voltar para a tela de contextos?', 'contextos.html')">
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
-            <a href="index.html" title="VOLTAR PARA O INÍCIO" class="hamburguer-botoes logo-link">
+            <a title="VOLTAR PARA O INÍCIO" class="hamburguer-botoes logo-link" onclick="event.preventDefault(); mostrarConfirmacaoSairTela('Tem certeza que deseja voltar para a tela inicial?', 'index.html')">
                 <img src="img/logo.png" alt="Logo alpha" class="logo-alpha">
             </a>
         </div>
 
         <h2 id="contexto-atual"></h2>
 
-        <a href="https://apps4society.dcx.ufpb.br/featured-slider/" class="hamburguer-botoes a4s-link" title="Apps4Society" target="_blank">
+        <a class="hamburguer-botoes a4s-link" title="Apps4Society" target="_blank" onclick="event.preventDefault(); mostrarConfirmacaoSairTela('Tem certeza que deseja ir para o site do A4S?', 'https://apps4society.dcx.ufpb.br/featured-slider/')">
             <img src="img/logotipofinal.png" class="a4s" alt="apps4society">
         </a>
         <div class="hamburguer">
@@ -90,6 +90,11 @@
                     <button type="submit">CONFIRMAR</button>
                 </div>
             </form>
+        </div>
+        <div class="confirmacao-sair-tela">
+            <p id="texto-confirmacao"></p>
+            <button class="confirmar" onclick="redirecionar()">Confirmar</button>
+            <button class="cancelar" onclick="esconderConfirmacaoSairTela()">Cancelar</button>
         </div>
     </main>
 
