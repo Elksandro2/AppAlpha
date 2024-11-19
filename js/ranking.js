@@ -38,10 +38,29 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function zerarRanking() {
-    const CONFIRMACAO = confirm("Deseja zerar o ranking?")
+    localStorage.removeItem("ranking");
+    atualizarRankingNaPagina([]);
+    
+    esconderConfirmacaoZerarRanking();
 
-    if(CONFIRMACAO){
-        localStorage.removeItem("ranking");
-        atualizarRankingNaPagina([]); // Atualiza a exibição da tabela com o ranking vazio
-    }
+    const PARAGRAFO_CONFIRMACAO = document.getElementById('sucesso');
+
+    PARAGRAFO_CONFIRMACAO.innerHTML = "Ranking zerado com sucesso!"
+
+    const CONTAINER_PARAGRAFO = PARAGRAFO_CONFIRMACAO.parentElement;
+    CONTAINER_PARAGRAFO.style.display = 'block';
+
+    setTimeout(() => {
+        CONTAINER_PARAGRAFO.style.display = 'none';
+    }, 5000);
+}
+
+function mostrarConfirmacaoZerarRanking() {
+    const CONFIRMAR = document.querySelector('.confirmacao-zerar-ranking');
+    CONFIRMAR.style.display = 'block';
+}
+
+function esconderConfirmacaoZerarRanking() {
+    const CONFIRMAR = document.querySelector('.confirmacao-zerar-ranking');
+    CONFIRMAR.style.display = 'none';
 }

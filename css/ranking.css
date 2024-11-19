@@ -55,6 +55,58 @@ td {
     color: white;
 }
 
+.mensagem-sucesso {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    padding: 15px;
+    background-color: #14862f;
+    color: white;
+    border-radius: 10px;
+    display: none;
+}
+
+.mensagem-sucesso p {
+    font-size: .8rem;
+}
+
+.confirmacao-zerar-ranking {
+    width: 300px;
+    height: 110px;
+    background-color: rgb(6, 84, 112);
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    font-weight: 600;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    display: none;
+}
+
+.confirmacao-zerar-ranking button {
+    margin: 1rem 2rem;
+    border: none;
+    padding: .15rem;
+    cursor: pointer;
+    border-radius: .2rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.confirmar {
+    background-color: rgb(34, 122, 72);
+}
+
+.cancelar {
+    background-color: rgb(209, 11, 11);
+}
+
+.confirmar:hover, .cancelar:hover {
+    transform: scale(1.1);
+}
+
 @media (max-width: 770px) {
     .tabela {
         font-size: 30px;
