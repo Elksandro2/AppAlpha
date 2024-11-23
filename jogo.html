@@ -24,7 +24,7 @@
 
         <h2 id="contexto-atual"></h2>
 
-        <a class="hamburguer-botoes a4s-link" title="Apps4Society" target="_blank" onclick="event.preventDefault(); mostrarConfirmacaoSairTela('Tem certeza que deseja ir para o site do A4S?', 'https://apps4society.dcx.ufpb.br/featured-slider/')">
+        <a class="hamburguer-botoes a4s-link" title="Apps4Society" onclick="event.preventDefault(); mostrarConfirmacaoSairTela('Tem certeza que deseja ir para o site do A4S?', 'https://apps4society.dcx.ufpb.br/featured-slider/')">
             <img src="img/logotipofinal.png" class="a4s" alt="apps4society">
         </a>
         <div class="hamburguer">
@@ -86,15 +86,15 @@
             <form>
                 <label for="nomeJogador">DIGITE SEU NOME:</label><br>
                 <input type="text" id="nomeJogador" name="nome" required placeholder="Ex.: Elksandro"><br>
-                <div class="confirmar">
-                    <button type="submit">CONFIRMAR</button>
+                <div class="container-confirmar">
+                    <button type="submit" class="confirmar">CONFIRMAR</button>
                 </div>
             </form>
         </div>
         <div class="confirmacao-sair-tela">
             <p id="texto-confirmacao"></p>
-            <button class="confirmar" onclick="redirecionar()">Confirmar</button>
-            <button class="cancelar" onclick="esconderConfirmacaoSairTela()">Cancelar</button>
+            <button class="confirmar" onclick="redirecionar()">CONFIRMAR</button>
+            <button class="cancelar" onclick="esconderConfirmacaoSairTela()">CANCELAR</button>
         </div>
     </main>
 

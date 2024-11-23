@@ -76,7 +76,7 @@ h2 {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
     color: rgb(15, 127, 168);
     border: none;
@@ -126,6 +126,10 @@ tr {
     display: none;
 }
 
+.container-confirmar {
+    text-align: center;
+}
+
 .recuperar-nome input {
     margin: 10px 0px 15px;
     height: 25px;
@@ -135,22 +139,11 @@ tr {
 }
 
 .confirmar {
-    text-align: center;
-}
-
-.confirmar button {
     border: 2px solid transparent;
     border-radius: 5px;
     padding: 4px;
-    background-color: #fff;
-    color: #14862f;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.confirmar button:hover {
-    background-color: #14862f;
     color: #fff;
+    cursor: pointer;
 }
 
 .hamburguer {
@@ -177,13 +170,13 @@ tr {
 }
 
 .confirmacao-sair-tela button {
-    margin: 1rem 2rem;
+    margin: 1rem;
     border: none;
-    padding: .15rem;
+    padding: .3rem;
     cursor: pointer;
     border-radius: .2rem;
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .confirmar {
@@ -199,6 +192,11 @@ tr {
 }
 
 @media (max-width: 600px) {
+    .teclado button:hover {
+        background-color: #fff;
+        color: rgb(15, 127, 168);;
+    }
+
     .hamburguer {
         display: block;
         cursor: pointer;

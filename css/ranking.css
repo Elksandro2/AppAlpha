@@ -85,9 +85,9 @@ td {
 }
 
 .confirmacao-zerar-ranking button {
-    margin: 1rem 2rem;
+    margin: 1rem;
     border: none;
-    padding: .15rem;
+    padding: .4rem;
     cursor: pointer;
     border-radius: .2rem;
     color: #fff;
