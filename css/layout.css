@@ -6,6 +6,21 @@
 
 header {
     text-align: center;
+    display: flex;
+    align-items: center;
+    padding: .4rem;
+    background-color: #353535;
+    margin-bottom: 1rem;
+    max-width: 100vw;
+    position: relative;
+    background-color: rgb(6, 84, 112);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    flex-grow: 1;
 }
 
 body{
@@ -70,5 +85,11 @@ body{
     .voltar, .a4s{
         width: 30px;
         height: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    header h2 {
+        font-size: 1.6rem;
     }
 }

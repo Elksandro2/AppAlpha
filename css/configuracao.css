@@ -7,25 +7,6 @@
     gap: 50px;
 }
 
-
-header {
-    display: flex;
-    align-items: center;
-    padding: .4rem;
-    background-color: #353535;
-    margin-bottom: 1rem;
-    max-width: 100vw;
-    position: relative;
-    background-color: rgb(6, 84, 112);
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.8);
-}
-
-h2 {
-    font-size: 2rem;
-    text-align: center;
-    flex-grow: 1;
-}
-
 .voltar{
     position: absolute;
     margin-right: auto;
@@ -37,7 +18,7 @@ h2 {
     margin: auto;
     background-color: rgba(245, 154, 49, 0.6);
     border-radius: 20px;
-    max-width: 420px;
+    max-width: 40%;
     text-align: center;
     padding: 10px;
 }
@@ -97,7 +78,14 @@ h3 {
 
     .visualizacao {
         font-size: 50px;
-        max-width: 380px;
+        max-width: 80%;
+    }
+
+    .salvar button {
+        width: 120px;
+        height: 120px;
+        font-size: 60px;
+        border-radius: 90px;
     }
 }
 
@@ -112,15 +100,16 @@ h3 {
 
     .visualizacao {
         font-size: 45px;
-        max-width: 320px;
+    }
+
+    .salvar button {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
     }
 }
 
-@media (max-width: 480px) {
-    h2{
-        font-size: 1.6rem;
-    }
-    
+@media (max-width: 480px) {    
     h3{
         font-size: 26px;
         margin-top: 30px;
@@ -131,8 +120,7 @@ h3 {
     }
 
     .visualizacao {
-        font-size: 28px;
-        max-width: 220px;
+        font-size: 2rem;
     }
 }
 
@@ -144,10 +132,5 @@ h3 {
     
     .escolha-tema {
         font-size: 22px;
-    }
-
-    .visualizacao {
-        font-size: 22px;
-        max-width: 270px;
     }
 }
