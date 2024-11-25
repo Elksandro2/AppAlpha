@@ -17,7 +17,7 @@ header {
     gap: 1rem
 }
 
-h2 {
+header h2 {
     font-size: 2rem;
     margin-left: -10rem;
     flex-grow: 0;
@@ -106,17 +106,15 @@ tr {
 }
 
 .recuperar-nome {
-    width: 300px;
-    height: 180px;
     background-color: rgb(6, 84, 112);
     border: 2px solid #fff;
     border-radius: 5px;
     margin: auto;
     text-align: start;
-    padding: 1rem 2rem;
+    padding: 1.4rem 2.4rem;
     font-weight: 600;
     position: absolute;
-    top: 50%;
+    top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
@@ -161,12 +159,12 @@ tr {
     position: absolute;
     top: 30%;
     left: 50%;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -50%);
     display: none;
 }
 
 .confirmacao-sair-tela button {
-    margin: 1rem;
+    margin: 1rem .6rem;
     border: none;
     padding: .3rem;
     cursor: pointer;
@@ -247,7 +245,7 @@ tr {
         color: rgb(15, 127, 168);;
     }
 
-    h2 {
+    header h2 {
         margin: auto;
     }
 

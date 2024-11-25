@@ -17,7 +17,7 @@ header {
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.8);
 }
 
-h2 {
+header h2 {
     font-size: 2rem;
     text-align: center;
     flex-grow: 1;
@@ -81,15 +81,15 @@ body{
     color: white;
 }
 
+@media (max-width: 600px) {
+    header h2 {
+        font-size: 1.6rem;
+    }
+}
+
 @media (max-width: 580px) {
     .voltar, .a4s{
         width: 30px;
         height: 30px;
-    }
-}
-
-@media (max-width: 600px) {
-    header h2 {
-        font-size: 1.6rem;
     }
 }
