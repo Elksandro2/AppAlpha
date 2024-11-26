@@ -110,10 +110,6 @@
                     "imagem": "img/temas/cidade/museu.jpg"
                 },
                 {
-                    "nome": "praia",
-                    "imagem": "img/temas/cidade/praia.jpg"
-                },
-                {
                     "nome": "restaurante",
                     "imagem": "img/temas/cidade/restaurante.jpg"
                 },
@@ -231,6 +227,10 @@
                 {
                     "nome": "árvore",
                     "imagem": "img/temas/natureza/arvore.jpg"
+                },
+                {
+                    "nome": "praia",
+                    "imagem": "img/temas/cidade/praia.jpg"
                 },
                 {
                     "nome": "bode",
