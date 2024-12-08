@@ -74,7 +74,6 @@ function iniciarDesafio() {
 function exibirPalavra() {
     const PALAVRA_CONTAINER = document.getElementById('palavra');
     PALAVRA_CONTAINER.textContent = palavraAtual.join(" ").toUpperCase();
-    aplicarConfiguracoes();
 }
 
 function letraClicada(letra) {

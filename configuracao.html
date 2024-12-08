@@ -20,27 +20,27 @@
         <h3>TIPO DE LETRA</h3>
         <div class="escolha-tema">
             <div class="tipo-letra">
-                <input type="radio" id="cursiva" name="tipoLetra" value="cursiva">
+                <input type="radio" id="cursiva" name="tipoLetra" value="cursiva" onclick="letraCursiva()">
                 <label for="cursiva">CURSIVA</label><br>
-                <input type="radio" id="bastao" name="tipoLetra" value="bastao">
+                <input type="radio" id="bastao" name="tipoLetra" value="bastao" onclick="letraBastao()" checked>
                 <label for="bastao">BASTÃO</label>
             </div>
             <div class="tamanho-letra">
-                <input type="radio" id="maiuscula" name="tamanhoLetra" value="maiuscula">
+                <input type="radio" id="maiuscula" name="tamanhoLetra" value="maiuscula" onclick="letraMaiuscula()" checked>
                 <label for="maiuscula">MAIÚSCULAS</label><br>
-                <input type="radio" id="minuscula" name="tamanhoLetra" value="minuscula">
+                <input type="radio" id="minuscula" name="tamanhoLetra" value="minuscula" onclick="letraMinuscula()">
                 <label for="minuscula">MINÚSCULAS</label>
             </div>
         </div>
     
         <h3>VISUALIZAÇÃO</h3>
         <div class="visualizacao">
-            <p class="letraVariavel">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+            <p class="letraVariavel" id="visualizar-letras">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
         </div>
 
         <div class="salvar">
-            <button onclick="mudarLetra()"><i class="fa-solid fa-floppy-disk"></i></button>
-            <p class="texto-botao">Salvar e Visualizar</p>
+            <button onclick="salvarConfiguracoes()"><i class="fa-solid fa-floppy-disk"></i></button>
+            <p class="texto-botao">Salvar</p>
         </div>
     </main>
 
